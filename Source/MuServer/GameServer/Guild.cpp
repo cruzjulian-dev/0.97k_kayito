@@ -1338,10 +1338,13 @@ bool CGuild::GuildWarCheck(LPOBJ lpObj, LPOBJ lpTargetObj)
 
 	int score = 1;
 
+	// Comento check para que sumen de a 2 puntos los Masters al morir.
+	/*
 	if (strcmp(lpTargetObj->Name, lpTargetObj->Guild->Members[0].Name) == 0)
 	{
 		score = 2;
 	}
+	*/
 
 	GUILD_INFO* lpGuild = lpObj->Guild;
 

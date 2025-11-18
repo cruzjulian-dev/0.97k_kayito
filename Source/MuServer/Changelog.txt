@@ -1,0 +1,10 @@
+[Capitan Drogoria Changes]
+
+Update 1:
+- Deshabilito que los Masters entreguen 2 puntos al morir en War.
+
+[Cambio en MuServer Files]
+- Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills
+  Death Stab, Fire Slash.
+- Para permitir el Lageo, aumento Radio en Skill.txt lado servidor de las siguientes Skills
+  Aqua Beam, Inferno, Ice, Poison.
