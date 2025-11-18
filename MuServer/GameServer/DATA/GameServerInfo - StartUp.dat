@@ -23,7 +23,7 @@ ServerPort=55901
 ServerVersion=0.97.11
 
 ; Serial of the Server -> Sync with Encoder/MainInfo
-ServerSerial=TbYehR2hFUPBKgZj
+ServerSerial=xbY3hR4hjUcBKgj
 
 ; Maximum users (MAX: 1000)
 ServerMaxUserNumber=3
@@ -50,22 +50,22 @@ ConnectServerPort=55601
 ; Log Settings
 ;==================================================
 ; Enable General Logs (0 = No / 1 = Yes)
-WriteGeneralLog=1
+WriteGeneralLog=0
 
 ; Enable Chat Logs (0 = No / 1 = Yes)
-WriteChatLog=1
+WriteChatLog=0
 
 ; Enable Command Logs (0 = No / 1 = Yes)
-WriteCommandLog=1
+WriteCommandLog=0
 
 ; Enable Trade Logs (0 = No / 1 = Yes)
-WriteTradeLog=1
+WriteTradeLog=0
 
 ; Enable Connect Logs (0 = No / 1 = Yes)
-WriteConnectLog=1
+WriteConnectLog=0
 
 ; Enable Hack Logs (0 = No / 1 = Yes)
-WriteHackLog=1
+WriteHackLog=0
 
 ; Enable Chaos Mix Logs (0 = No / 1 = Yes)
-WriteChaosMixLog=1
+WriteChaosMixLog=0
