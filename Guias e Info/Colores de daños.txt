@@ -1,0 +1,8 @@
+Gris = Miss hacia mi
+Blanco = Miss hacia otro
+Rojo = Daño normal hacia mi
+Naranja = Daño normal hacia otro
+Amarillo = Ignore Defense
+Cyan (Verde muy claro) = Excellent
+Azul = Crítico
+Violeta = Reflect

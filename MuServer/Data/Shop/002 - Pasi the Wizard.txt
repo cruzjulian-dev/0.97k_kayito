@@ -4,6 +4,21 @@
 //SLOTS X = 0~7 , Y = 0~14 , * = Orden original
 //Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
 
-
+15,00	0	0	0	0	0	0	*	*	//Poison			
+15,01	0	0	0	0	0	0	*	*	//Meteorite		
+15,02	0	0	0	0	0	0	*	*	//Lightning		
+15,03	0	0	0	0	0	0	*	*	//Fire Ball		
+15,04	0	0	0	0	0	0	*	*	//Flame	
+15,05	0	0	0	0	0	0	*	*	//Teleport	
+15,06	0	0	0	0	0	0	*	*	//Ice		
+15,07	0	0	0	0	0	0	*	*	//Twister		
+15,08	0	0	0	0	0	0	*	*	//Evil Spirit
+15,09	0	0	0	0	0	0	*	*	//Hellfire
+15,10	0	0	0	0	0	0	*	*	//Power Wave	
+15,11	0	0	0	0	0	0	*	*	//Aqua Beam	
+15,12	0	0	0	0	0	0	*	*	//Cometfall	
+15,13	0	0	0	0	0	0	*	*	//Inferno	
+15,14	0	0	0	0	0	0	*	*	//Teleport Ally
+15,15	0	0	0	0	0	0	*	*	//Soul Barrier
 
 end

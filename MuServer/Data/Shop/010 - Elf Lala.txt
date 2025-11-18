@@ -4,6 +4,17 @@
 //SLOTS X = 0~7 , Y = 0~14 , * = Orden original
 //Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
 
-
+12,08	0	0	0	0	0	0	*	*	//Orb of Healing
+12,09	0	0	0	0	0	0	*	*	//Orb of Greater Defense
+12,10	0	0	0	0	0	0	*	*	//Orb of Greater Damage	
+12,11	0	0	0	0	0	0	*	*	//Orb of Summoning +0
+12,11	1	0	0	0	0	0	*	*	//Orb of Summoning +1
+12,11	2	0	0	0	0	0	*	*	//Orb of Summoning +2
+12,11	3	0	0	0	0	0	*	*	//Orb of Summoning +3
+12,11	4	0	0	0	0	0	*	*	//Orb of Summoning +4
+12,11	5	0	0	0	0	0	*	*	//Orb of Summoning +5
+12,11	6	0	0	0	0	0	*	*	//Orb of Summoning +6
+12,17	0	0	0	0	0	0	*	*	//Orb of Penetration
+12,18	0	0	0	0	0	0	*	*	//Orb of Ice Arrow
 
 end

@@ -29,6 +29,9 @@
 13,018		4		780000		*		// Invisibility Cloak 4
 13,018		5		840000		*		// Invisibility Cloak 5
 13,018		6		900000		*		// Invisibility Cloak 6
+14,003		*		10000		*		// Large Healing Potion
+14,006		*		10000		*		// Large Mana Potion
+14,008		*		10000		*		// Antidote
 14,009		1		1000		*		// Ale
 14,013		*		9000000		*		// Jewel of Bless
 14,014		*		6000000		*		// Jewel of Soul

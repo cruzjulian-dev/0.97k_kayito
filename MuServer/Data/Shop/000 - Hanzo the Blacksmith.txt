@@ -4,6 +4,31 @@
 //SLOTS X = 0~7 , Y = 0~14 , * = Orden original
 //Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
 
+12,19	0	0	0	0	0	0	*	*	//Death Stab
+12,07	0	0	0	0	0	0	*	*	//Twisting Slash
+12,12	0	0	0	0	0	0	*	*	//Rageful Blow
+12,13	0	0	0	0	0	0	*	*	//Impale
+12,16	0	0	0	0	0	0	*	*	//Fire Slash
 
+07,16	11	*	0	1	4	16	0	1	// Black Dragon Helm   (RT+DD)
+08,16	11	*	0	1	4	16	0	3	// Black Dragon Armor  (RT+DD)
+10,16	11	*	0	1	4	16	0	6	// Black Dragon Gloves (RT+DD)
+09,16	11	*	0	1	4	16	0	8	// Black Dragon Pants  (RT+DD)
+11,16	11	*	0	1	4	16	0	10	// Black Dragon Boots  (RT+DD)
 
+08,15	11	*	0	1	4	16	2	1	// Storm Crown Armor  (RT+DD)
+10,15	11	*	0	1	4	16	2	4	// Storm Crown Gloves (RT+DD)
+09,15	11	*	0	1	4	16	2	6	// Storm Crown Pants  (RT+DD)
+11,15	11	*	0	1	4	16	2	8	// Storm Crown Boots  (RT+DD)
+                                                                                            
+07,16	11	*	0	1	4	18	4	1	// Black Dragon Helm   (RT+RF)
+08,16	11	*	0	1	4	18	4	3	// Black Dragon Armor  (RT+RF)
+10,16	11	*	0	1	4	18	4	6	// Black Dragon Gloves (RT+RF)
+09,16	11	*	0	1	4	18	4	8	// Black Dragon Pants  (RT+RF)
+11,16	11	*	0	1	4	18	4	10	// Black Dragon Boots  (RT+RF)
+
+08,15	11	*	0	1	4	18	6	1	// Storm Crown Armor   (RT+RF)
+10,15	11	*	0	1	4	18	6	4	// Storm Crown Gloves  (RT+RF)
+09,15	11	*	0	1	4	18	6	6	// Storm Crown Pants   (RT+RF)
+11,15	11	*	0	1	4	18	6	8	// Storm Crown Boots   (RT+RF)
 end

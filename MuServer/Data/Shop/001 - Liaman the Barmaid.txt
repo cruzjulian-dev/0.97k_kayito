@@ -4,30 +4,31 @@
 //SLOTS X = 0~7 , Y = 0~14 , * = Orden original
 //Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
 
-14,001	0	255	0	0	0	0	*	*	// Small Healing Potion
-14,002	0	255	0	0	0	0	*	*	// Medium Healing Potion
-14,003	0	255	0	0	0	0	*	*	// Large Healing Potion
+14,003	11	255	0	0	0	0	*	*	// Large Healing Potion
+14,006	11	255	0	0	0	0	*	*	// Large Mana Potion
+14,008	11	255	0	0	0	0	*	*	// Antidote
+14,011  08	1	0	0	0	0	*	*	// Box of Kundun +1
+14,011  09	1	0	0	0	0	*	*	// Box of Kundun +2
+14,011  10	1	0	0	0	0	*	*	// Box of Kundun +3
+14,011  11	1	0	0	0	0	*	*	// Box of Kundun +4
+14,011  12	1	0	0	0	0	*	*	// Box of Kundun +5
+14,009  00	1	0	0	0	0	*	*	// Alcohol
+14,020  00	1	0	0	0	0	*	*	// Remedy of Love
+12,015  00	1	0	0	0	0	*	*	// Jewel of Chaos
+14,013  00	1	0	0	0	0	*	*	// Jewel of Bless
+14,014  00	1	0	0	0	0	*	*	// Jewel of Soul
+14,016  00	1	0	0	0	0	*	*	// Jewel of Life
+14,022  00	1	0	0	0	0	*	*	// Jewel of Creation
+13,000	00	255	0	0	0	0	*	*	// Guardian Angel
+13,001	00	255	0	0	0	0	*	*	// Satan
+14,023  00	0	0	0	0	0	*	*	// Scroll of Emperor
+14,024  00	0	0	0	0	0	*	*	// Broken Sword	
+14,025  00	0	0	0	0	0	*	*	// Tear of Elf	
+14,026  00	0	0	0	0	0	*	*	// Soul Shard of Wizard
 
-14,001	0	100	0	0	0	0	*	*	// Small Healing Potion
-14,002	0	100	0	0	0	0	*	*	// Medium Healing Potion
-14,003	0	100	0	0	0	0	*	*	// Large Healing Potion
-
-14,001	0	50	0	0	0	0	*	*	// Small Healing Potion
-14,002	0	50	0	0	0	0	*	*	// Medium Healing Potion
-14,003	0	50	0	0	0	0	*	*	// Large Healing Potion
-
-14,004	0	255	0	0	0	0	*	*	// Small Mana Potion
-14,005	0	255	0	0	0	0	*	*	// Medium Mana Potion
-14,006	0	255	0	0	0	0	*	*	// Large Mana Potion
-
-14,004	0	100	0	0	0	0	*	*	// Small Mana Potion
-14,005	0	100	0	0	0	0	*	*	// Medium Mana Potion
-14,006	0	100	0	0	0	0	*	*	// Large Mana Potion
-
-14,004	0	50	0	0	0	0	*	*	// Small Mana Potion
-14,005	0	50	0	0	0	0	*	*	// Medium Mana Potion
-14,006	0	50	0	0	0	0	*	*	// Large Mana Potion
-
-14,008	0	255	0	0	0	0	*	*	// Antidote
+12,03	11	255	0	1	4	63	*	*	//Wings of Spirits (ELF)
+12,04	11	255	0	1	4	63	*	*	//Wings of Soul (SM)
+12,05	11	255	0	1	4	63	*	*	//Wings of Dragon (BK)
+12,06	11	255	0	1	4	63	*	*	//Wings of Darkness (MG)
 
 end

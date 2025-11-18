@@ -9,5 +9,14 @@
 14,005		*		255		*		//Mana Potion
 14,006		*		255		*		//Large Mana Potion
 14,008		*		255		*		//Antidote
-
+14,011		08		255		*		//Box of Kundun+1
+14,011		09		255		*		//Box of Kundun+2
+14,011		10		255		*		//Box of Kundun+3
+14,011		11		255		*		//Box of Kundun+4
+14,011		12		255		*		//Box of Kundun+5
+12,015		*		255		*		//Jewel of Chaos
+14,013		*		255		*		//Jewel of Bless
+14,014		*		255		*		//Jewel of Soul
+14,016		*		255		*		//Jewel of Life
+14,022		*		255		*		//Jewel of Creation
 end

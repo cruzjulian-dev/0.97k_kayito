@@ -3,6 +3,9 @@
 Update 1:
 - Deshabilito que los Masters entreguen 2 puntos al morir en War.
 
+Update 2:
+- Fix Item Stack con Box of Kunduns
+
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills
   Death Stab, Fire Slash.
