@@ -1,0 +1,8 @@
+[Capitan Drogoria Changes]
+
+Update 1:
+- Comento codigo para permitir el Lageo. (Prox update agregar Switch)
+- Minimapa ajustado.
+- Camara 3D ajustada.
+- Cursor GL_NEAREST.
+- Guild Logo ajustado.
