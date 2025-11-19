@@ -6,3 +6,8 @@ Update 1:
 - Camara 3D ajustada.
 - Cursor GL_NEAREST.
 - Guild Logo ajustado.
+
+Update 2:
+- EnableSpecialCharacters modificado para aceptar solamente '-' y '_'.
+- Quitado el FOG (se comentó e gMapFog, ver otras formas)
+- Agregado opción "Show Name Always" en el menú de opciones

@@ -1129,7 +1129,7 @@ void CPatchs::RenderBrokenItem(int PosY)
 
 bool CPatchs::CheckSpecialText(char* Text)
 {
-	if (gProtect.m_MainInfo.EnableSpecialCharacters != 0)
+	if (gProtect.m_MainInfo.EnableSpecialCharacters == 0)
 	{
 		return false;
 	}
@@ -1138,7 +1138,11 @@ bool CPatchs::CheckSpecialText(char* Text)
 	{
 		if (_mbclen(lpszCheck) == 1) // One byte
 		{
-			if (*lpszCheck < 48 || (58 <= *lpszCheck && *lpszCheck < 65) || (91 <= *lpszCheck && *lpszCheck < 97) || *lpszCheck > 122)
+			if ((*lpszCheck < 45 || *lpszCheck == 46 || (*lpszCheck >= 47 && *lpszCheck < 48)) ||
+				(58 <= *lpszCheck && *lpszCheck < 65) ||
+				(91 <= *lpszCheck && *lpszCheck < 95) ||
+				(*lpszCheck == 96) ||
+				(*lpszCheck > 122))
 			{
 				return true;
 			}

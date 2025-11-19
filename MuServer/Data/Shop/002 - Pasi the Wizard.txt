@@ -21,4 +21,10 @@
 15,14	0	0	0	0	0	0	*	*	//Teleport Ally
 15,15	0	0	0	0	0	0	*	*	//Soul Barrier
 
+07,18	11	*	0	1	4	16	0	4	// Grand Soul Helm   (RT+DD)
+08,18	11	*	0	1	4	16	0	6	// Grand Soul Armor  (RT+DD)
+10,18	11	*	0	1	4	16	0	9	// Grand Soul Gloves (RT+DD)
+09,18	11	*	0	1	4	16	0	11	// Grand Soul Pants  (RT+DD)
+11,18	11	*	0	1	4	16	0	13	// Grand Soul Boots  (RT+DD)
+
 end
