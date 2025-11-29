@@ -1,7 +1,7 @@
 [Capitan Drogoria Changes]
 
 Update 1:
-- Comento codigo para permitir el Lageo. (Prox update agregar Switch)
+- Comento codigo para permitir el Lageo.
 - Minimapa ajustado.
 - Camara 3D ajustada.
 - Cursor GL_NEAREST.
@@ -11,3 +11,11 @@ Update 2:
 - EnableSpecialCharacters modificado para aceptar solamente '-' y '_'.
 - Quitado el FOG (se comentó e gMapFog, ver otras formas)
 - Agregado opción "Show Name Always" en el menú de opciones
+
+Update 3:
+- Se corregió todas las combinaciones de HealthBarType + DeleteHealthBar + ShowNameAlways. Funcionan todas correctamente.
+- Se movió de lugar la opción DeleteHealthBar de Antilag -> General, para más comodidad.
+- Remuevo las opciones de 'Antilag' -> Eliminar Suelo y Eliminar Interface.
+
+Prox Update:
+- [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.

@@ -1,1 +1,4 @@
 Client/Config.ini
+Client/Data/Local/ClientInfo.bmd
+Encoder/Client/Data/Local/ClientInfo.bmd
+MuServer/GameServer/GameServer.exe
