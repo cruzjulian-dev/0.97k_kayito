@@ -6,6 +6,9 @@ Update 1:
 Update 2:
 - Fix Item Stack con Box of Kunduns
 
+Update 3:
+- Agregado mostrar nombre PC y Usuario en Tools -> Online Users
+
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills
   Death Stab, Fire Slash.

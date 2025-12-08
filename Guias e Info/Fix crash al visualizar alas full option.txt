@@ -1,0 +1,10 @@
+* El juego se cierra al visualizar alas full option
+
+Este error suele ocurrir por incompatibilidades de renderizado entre el sistema operativo y los efectos gráficos del cliente.
+
+- Hacé clic derecho sobre el archivo Main.exe del cliente.
+- Seleccioná Propiedades y luego accedé a la pestaña Compatibilidad.
+- Activá la opción Ejecutar este programa en modo de compatibilidad y seleccioná Windows XP (Service Pack 3).
+- Aplicá los cambios y volvé a iniciar el juego.
+
+Video explicativo: https://youtu.be/1dNUD7VSd2w

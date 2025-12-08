@@ -103,6 +103,8 @@ struct PMSG_SET_HWID_RECV
 {
 	PSBMSG_HEAD head; // C1:F1:05
 	char HardwareId[36];
+	char ComputerName[64];
+	char UserName[64];
 };
 
 struct PMSG_CHARACTER_CREATE_RECV

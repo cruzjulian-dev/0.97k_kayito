@@ -570,6 +570,10 @@ LRESULT CALLBACK UserOnline(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
 
 							SetDlgItemText(hDlg, IDC_EDIT3, gObj[i].HardwareID);
 
+							char info[128];
+							wsprintf(info, "%s (%s)", gObj[i].ComputerName, gObj[i].UserName);
+							SetDlgItemText(hDlg, IDC_EDIT9, info);
+
 							if (gObj[i].Name[0] == 0)
 							{
 								SetDlgItemText(hDlg, IDC_EDIT4, "SELECT CHARACTER");
@@ -669,7 +673,10 @@ LRESULT CALLBACK UserOnline(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
 
 					SetDlgItemText(hDlg, IDC_EDIT7, "");
 
-					MessageBox(hDlg, "Reloaded users online", "Confirm", MB_OK);
+					SetDlgItemText(hDlg, IDC_EDIT9, "");
+
+					//Dialog de Reloaded Users
+					//MessageBox(hDlg, "Reloaded users online", "Confirm", MB_OK);
 
 					return TRUE;
 				}

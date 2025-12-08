@@ -1,0 +1,11 @@
+* El juego no inicia - "Failed loading the plugin"
+
+Este error ocurre cuando faltan librerías Visual C++ en tu sistema, necesarias para ejecutar el cliente.
+
+- Descargá el siguiente pack de librerías Visual C++ desde este enlace: Visual C++ Redistributable Runtime AIO
+- Descomprimí TODO el archivo en una carpeta local de tu computadora.
+- Ejecutá el archivo install_all.bat y aceptá todos los instaladores que aparezcan.
+- Una vez finalizado, borrá la carpeta donde habías descomprimido el cliente del Mu.
+- Volvé a descomprimir el .rar original del Mu y ejecutalo normalmente.
+
+Video explicativo: https://youtu.be/8ioOgcH2-w0

@@ -1256,6 +1256,8 @@ void CGSetHwidRecv(PMSG_SET_HWID_RECV* lpMsg, int aIndex)
 	}
 
 	strcpy_s(gObj[aIndex].HardwareID, lpMsg->HardwareId);
+	strcpy_s(gObj[aIndex].ComputerName, lpMsg->ComputerName);
+	strcpy_s(gObj[aIndex].UserName, lpMsg->UserName);
 }
 
 void CGCharacterListRecv(int aIndex)
