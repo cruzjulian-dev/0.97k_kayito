@@ -16,6 +16,7 @@ Update 3:
 - Se corregió todas las combinaciones de HealthBarType + DeleteHealthBar + ShowNameAlways. Funcionan todas correctamente.
 - Se movió de lugar la opción DeleteHealthBar de Antilag -> General, para más comodidad.
 - Remuevo las opciones de 'Antilag' -> Eliminar Suelo y Eliminar Interface.
+- Muestra mensaje con HWID al estar baneado.
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.

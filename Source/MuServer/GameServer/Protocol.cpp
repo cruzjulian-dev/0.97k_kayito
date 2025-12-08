@@ -1173,6 +1173,8 @@ void CGConnectAccountRecv(PMSG_CONNECT_ACCOUNT_RECV* lpMsg, int aIndex)
 	{
 		GCConnectAccountSend(aIndex, 5);
 
+		gLog.Output(LOG_CONNECT, "[ObjectManager][%d] BannedComputer [%s][%s][%s (%s)]", aIndex, lpObj->IpAddr, lpObj->HardwareID, lpObj->ComputerName, lpObj->UserName);
+
 		return;
 	}
 
@@ -1939,6 +1941,8 @@ void GCConnectAccountSend(int aIndex, BYTE result)
 	pMsg.header.set(0xF1, 0x01, sizeof(pMsg));
 
 	pMsg.result = result;
+
+	strcpy(pMsg.HardwareId, gObj[aIndex].HardwareID);
 
 	DataSend(aIndex, (BYTE*)&pMsg, pMsg.header.size);
 }

@@ -527,7 +527,12 @@ LRESULT CALLBACK UserOnline(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
 				{
 					TCHAR buff[30];
 
-					wsprintf(buff, "%s >>> %s", gObj[i].Account, gObj[i].Name);
+					wsprintf(buff, "%s >> %s >> %s (%s)",
+						gObj[i].Name,
+						gObj[i].Account,
+						gObj[i].ComputerName,
+						gObj[i].UserName
+					);
 
 					int pos = (int)SendMessage(hwndList, LB_ADDSTRING, 0, (LPARAM)buff);
 
@@ -651,7 +656,13 @@ LRESULT CALLBACK UserOnline(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
 						{
 							TCHAR buff[30];
 
-							wsprintf(buff, "%s >>> %s", gObj[i].Account, gObj[i].Name);
+							wsprintf(buff, "%s >> %s >> %s (%s)",
+								gObj[i].Name,
+								gObj[i].Account,
+								gObj[i].ComputerName,
+								gObj[i].UserName
+							);
+
 
 							int pos = (int)SendMessage(hwndList, LB_ADDSTRING, 0, (LPARAM)buff);
 
