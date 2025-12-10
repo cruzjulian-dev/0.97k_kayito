@@ -442,6 +442,15 @@ bool CProtocol::TranslateProtocol(BYTE head, BYTE* lpMsg, int Size)
 
 					return true;
 				}
+
+				//InfoBoss
+				case 0xE7:
+				{
+					gEventTimer.GCEventBossInfoRecv((PMSG_BOSS_INFO_LIST_RECV*)lpMsg);
+
+					return true;
+				}
+				//End InfoBoss
 			}
 
 			break;

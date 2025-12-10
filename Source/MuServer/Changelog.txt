@@ -9,6 +9,11 @@ Update 2:
 Update 3:
 - Agregado mostrar nombre PC y Usuario en Tools -> Online Users
 - Agregado mostrar logs con IP - HWID - PC Name
+- Agregado InfoBoss (Cliente - Servidor)
+
+Prox Update:
+- [Falta] SkillDamage.txt para configurar balance.
+- [Falta] Fix Reflect GS (se ajusta automaticamente)
 
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills

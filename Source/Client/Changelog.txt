@@ -17,7 +17,8 @@ Update 3:
 - Se movió de lugar la opción DeleteHealthBar de Antilag -> General, para más comodidad.
 - Remuevo las opciones de 'Antilag' -> Eliminar Suelo y Eliminar Interface.
 - Muestra mensaje con HWID al estar baneado.
+- Agregado InfoBoss (Cliente - Servidor)
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
-- [Falta] Agregar Info Boss para invasiones.
+- [Falta] Controlar el ban HWID, que pasa si se banea una cuenta pero no el hwid?
