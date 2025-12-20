@@ -997,7 +997,7 @@ void CGMoveRecv(PMSG_MOVE_RECV* lpMsg, int aIndex)
 		return;
 	}
 
-	if ((GetTickCount() - lpObj->LastMoveTime) < 1)
+	if ((GetTickCount() - lpObj->LastMoveTime) < 100)
 	{
 		return;
 	}
@@ -1171,7 +1171,7 @@ void CGConnectAccountRecv(PMSG_CONNECT_ACCOUNT_RECV* lpMsg, int aIndex)
 
 	if (gBlackList.CheckHardwareID(lpObj->HardwareID) != 0)
 	{
-		GCConnectAccountSend(aIndex, 5);
+		GCConnectAccountSend(aIndex, 12);
 
 		gLog.Output(LOG_CONNECT, "[ObjectManager][%d] BannedComputer [%s][%s][%s (%s)]", aIndex, lpObj->IpAddr, lpObj->HardwareID, lpObj->ComputerName, lpObj->UserName);
 

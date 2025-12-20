@@ -766,7 +766,7 @@ void CProtocol::GCConnectClientRecv(PMSG_CONNECT_CLIENT_RECV* lpMsg)
 
 void CProtocol::GCConnectAccountRecv(PMSG_CONNECT_ACCOUNT_RECV* lpMsg)
 {
-	if (lpMsg->result == 5)
+	if (lpMsg->result == 12)
 	{
 		char msg[160];
 		wsprintf(msg, "Este HWID [%s] ha sido bloqueado.\n\nNo tienes permitido ingresar al servidor.\n\nContacte al administrador para más detalles.", lpMsg->HardwareId);

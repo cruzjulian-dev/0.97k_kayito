@@ -22,4 +22,3 @@ Update 3:
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
-- [Falta] Controlar el ban HWID, que pasa si se banea una cuenta pero no el hwid?
