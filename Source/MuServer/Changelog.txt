@@ -10,6 +10,7 @@ Update 3:
 - Agregado mostrar nombre PC y Usuario en Tools -> Online Users
 - Agregado mostrar logs con IP - HWID - PC Name
 - Agregado InfoBoss (Cliente - Servidor)
+- Ajustada la cantidad de coordenadas permitidas para moverse antes de warpear. De 15 -> 20.
 
 Prox Update:
 - [Falta] SkillDamage.txt para configurar balance.

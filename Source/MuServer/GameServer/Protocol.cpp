@@ -997,7 +997,7 @@ void CGMoveRecv(PMSG_MOVE_RECV* lpMsg, int aIndex)
 		return;
 	}
 
-	if ((GetTickCount() - lpObj->LastMoveTime) < 100)
+	if ((GetTickCount() - lpObj->LastMoveTime) < 1)
 	{
 		return;
 	}
@@ -1071,7 +1071,7 @@ void CGMoveRecv(PMSG_MOVE_RECV* lpMsg, int aIndex)
 		}
 	}
 
-	if (lpObj->TX < (lpObj->X - 15) || lpObj->TX >(lpObj->X + 15) || lpObj->TY < (lpObj->Y - 15) || lpObj->TY >(lpObj->Y + 15))
+	if (lpObj->TX < (lpObj->X - 20) || lpObj->TX >(lpObj->X + 20) || lpObj->TY < (lpObj->Y - 20) || lpObj->TY >(lpObj->Y + 20))
 	{
 		lpObj->PathCur = 0;
 

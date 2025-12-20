@@ -18,6 +18,7 @@ Update 3:
 - Remuevo las opciones de 'Antilag' -> Eliminar Suelo y Eliminar Interface.
 - Muestra mensaje con HWID al estar baneado.
 - Agregado InfoBoss (Cliente - Servidor)
+- Ajuste a la Camara 3D. Se ve más cercano al ingresar al juego.
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.

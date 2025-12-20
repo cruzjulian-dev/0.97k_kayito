@@ -5,3 +5,6 @@ MuServer/GameServer/GameServer.exe
 Client/Main.dll
 Client/Config.ini
 MuServer/GameServer/GameServer.exe
+Client/Config.ini
+Client/Main.dll
+MuServer/GameServer/GameServer.exe

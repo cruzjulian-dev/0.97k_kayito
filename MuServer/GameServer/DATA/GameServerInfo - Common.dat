@@ -21,7 +21,7 @@ CheckAutoPotionHackTolerance=0
 ; Common Settings
 ;==================================================
 ; Maximum Jewel of Life additional option
-MaxItemOption=4
+MaxItemOption=7
 
 ; Maximum IPs per computer
 MaxIpConnection=10
@@ -51,10 +51,10 @@ NonPK=0
 PKLimitFree=0
 
 ; Time to decrease the Hero status (In Seconds)
-PKDownTime1=3600
+PKDownTime1=1800
 
 ; Time to decrease the PK status (In Seconds)
-PKDownTime2=3600
+PKDownTime2=1800
 
 ;==================================================
 ; Guild Settings
@@ -99,10 +99,10 @@ GuildWarWinPointsGain_Normal=1
 ; Experience Settings
 ;==================================================
 ; Experience rate gained in the server when killing monsters
-AddExperienceRate_AL0=100
-AddExperienceRate_AL1=100
-AddExperienceRate_AL2=100
-AddExperienceRate_AL3=100
+AddExperienceRate_AL0=1000
+AddExperienceRate_AL1=1000
+AddExperienceRate_AL2=1000
+AddExperienceRate_AL3=1000
 
 ; Experience rate gained in events reward (Devil Square, Blood Castle)
 AddEventExperienceRate_AL0=100
@@ -117,10 +117,10 @@ AddEventExperienceRate_AL3=100
 ItemDropTime=30
 
 ; Rate of the drop of the items
-ItemDropRate_AL0=100
-ItemDropRate_AL1=100
-ItemDropRate_AL2=100
-ItemDropRate_AL3=100
+ItemDropRate_AL0=50
+ItemDropRate_AL1=50
+ItemDropRate_AL2=50
+ItemDropRate_AL3=50
 
 ;==================================================
 ; Money Drop Settings
@@ -129,10 +129,10 @@ ItemDropRate_AL3=100
 MoneyDropTime=30
 
 ; Rate of the amount of droped zen
-MoneyAmountDropRate_AL0=50
-MoneyAmountDropRate_AL1=50
-MoneyAmountDropRate_AL2=50
-MoneyAmountDropRate_AL3=50
+MoneyAmountDropRate_AL0=100
+MoneyAmountDropRate_AL1=100
+MoneyAmountDropRate_AL2=100
+MoneyAmountDropRate_AL3=100
 
 ;==================================================
 ; Item Durability Settings
@@ -201,7 +201,7 @@ FELevelUpPoint=5
 MGLevelUpPoint=7
 
 ; Additional points gained per reset if character is 2nd class (SM, BK, ME, MG)
-PlusStatPoint=1
+PlusStatPoint=0
 
 ;==================================================
 ; Create Character Settings
@@ -311,10 +311,10 @@ JewelOfSoulAddLuckRate_AL2=25
 JewelOfSoulAddLuckRate_AL3=25
 
 ; Jewel of Life upgrade success rate
-JewelOfLifeSuccessRate_AL0=50
-JewelOfLifeSuccessRate_AL1=50
-JewelOfLifeSuccessRate_AL2=50
-JewelOfLifeSuccessRate_AL3=50
+JewelOfLifeSuccessRate_AL0=100
+JewelOfLifeSuccessRate_AL1=100
+JewelOfLifeSuccessRate_AL2=100
+JewelOfLifeSuccessRate_AL3=100
 
 ;==================================================
 ; Fruit Settings
