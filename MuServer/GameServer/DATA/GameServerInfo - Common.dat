@@ -27,7 +27,7 @@ MaxItemOption=7
 MaxIpConnection=10
 
 ; Disconnect the account when trying to connect to the same account (0 = No / 1 = Yes)
-DisconnectOnlineAccount=0
+DisconnectOnlineAccount=1
 
 ; Check the personal code (0 = No / 1 = Yes)
 PersonalCodeCheck=0
