@@ -11,6 +11,7 @@ Update 3:
 - Agregado mostrar logs con IP - HWID - PC Name
 - Agregado InfoBoss (Cliente - Servidor)
 - Ajustada la cantidad de coordenadas permitidas para moverse antes de warpear. De 15 -> 20.
+- Fix Precio al vender items NPC con mas de 4 opciones de Life (+16 para arriba)
 
 Prox Update:
 - [Falta] SkillDamage.txt para configurar balance.

@@ -25,10 +25,4 @@
 14,024  00	0	0	0	0	0	*	*	// Broken Sword	
 14,025  00	0	0	0	0	0	*	*	// Tear of Elf	
 14,026  00	0	0	0	0	0	*	*	// Soul Shard of Wizard
-
-12,03	11	255	0	1	4	63	*	*	//Wings of Spirits (ELF)
-12,04	11	255	0	1	4	63	*	*	//Wings of Soul (SM)
-12,05	11	255	0	1	4	63	*	*	//Wings of Dragon (BK)
-12,06	11	255	0	1	4	63	*	*	//Wings of Darkness (MG)
-
 end

@@ -19,6 +19,9 @@ Update 3:
 - Muestra mensaje con HWID al estar baneado.
 - Agregado InfoBoss (Cliente - Servidor)
 - Ajuste a la Camara 3D. Se ve más cercano al ingresar al juego.
+- Fix Precio al vender items NPC con mas de 4 opciones de Life (+16 para arriba)
+- Se cambio la , por . al recoger zen y ver precio en el movelist
+- Se deshabilito el pickeo de items con barra espaciadora
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.

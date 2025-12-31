@@ -1210,6 +1210,12 @@ DWORD CItem::ItemValue(ITEM* ip, int goldType)
 				price += ((m_ItemAddOption == 3) ? ((price * 280) / 100) : 0);
 
 				price += ((m_ItemAddOption == 4) ? ((price * 560) / 100) : 0);
+
+				price += ((m_ItemAddOption == 5) ? ((price * 760) / 100) : 0);
+
+				price += ((m_ItemAddOption == 6) ? ((price * 960) / 100) : 0);
+
+				price += ((m_ItemAddOption == 7) ? ((price * 1160) / 100) : 0);
 			}
 
 			for (int n = 0; n < 6; n++)

@@ -1,0 +1,13 @@
+//==============================================================
+// SHOP
+//==============================================================
+//SLOTS X = 0~7 , Y = 0~14 , * = Orden original
+//Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
+12,00	11	*	0	1	4	0	*	*	//Wings of Elf (ELF)
+12,01	11	*	0	1	4	0	*	*	//Wings of Heaven (DW)
+12,02	11	*	0	1	4	0	*	*	//Wings of Satan (DK)
+12,03	11	*	0	1	4	63	*	*	//Wings of Spirits (ELF)
+12,04	11	*	0	1	4	63	*	*	//Wings of Soul (SM)
+12,05	11	*	0	1	4	63	*	*	//Wings of Dragon (BK)
+12,06	11	*	0	1	4	63	*	*	//Wings of Darkness (MG)
+end

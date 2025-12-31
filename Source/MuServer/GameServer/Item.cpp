@@ -811,6 +811,12 @@ void CItem::Value()
 				price += ((this->m_AddOption == 3) ? ((price * 280) / 100) : 0);
 
 				price += ((this->m_AddOption == 4) ? ((price * 560) / 100) : 0);
+
+				price += ((this->m_AddOption == 5) ? ((price * 760) / 100) : 0);
+
+				price += ((this->m_AddOption == 6) ? ((price * 960) / 100) : 0);
+
+				price += ((this->m_AddOption == 7) ? ((price * 1160) / 100) : 0);
 			}
 
 			for (int n = 0; n < 6; n++)

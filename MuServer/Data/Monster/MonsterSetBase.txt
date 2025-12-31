@@ -8,6 +8,7 @@
 0
 //Mob	MapNum	Range	PosX	PosY	Direct	Name
 255	0	0	123	135	1	// Lumen the Barmaid
+244	0	0	125	135	1	// Caren the Barmaid
 254	0	0	118	113	3	// Pasi the Mage
 251	0	0	116	141	3	// Hanzo the Blacksmith
 248	0	0	6	145	2	// Wandering Merchant Martin

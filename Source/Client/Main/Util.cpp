@@ -300,7 +300,7 @@ void ConvertGold(double dGold, char* szText, int iDecimals)
 
 		dwValueTemp = (dwValueTemp % (int)pow(10.0f, (float)iCipherCnt)) / (int)pow(10.0f, (float)(iCipherCnt - 3));
 
-		sprintf_s(szTemp, ",%03d", dwValueTemp);
+		sprintf_s(szTemp, ".%03d", dwValueTemp);
 
 		sText += szTemp;
 
@@ -312,7 +312,7 @@ void ConvertGold(double dGold, char* szText, int iDecimals)
 	{
 		dwValueTemp = (int)(dGold * pow(10.0f, (float)iDecimals)) % (int)pow(10.0f, (float)iDecimals);
 
-		sprintf_s(szTemp, ".%d", dwValueTemp);
+		sprintf_s(szTemp, ",%d", dwValueTemp);
 
 		sText += szTemp;
 	}

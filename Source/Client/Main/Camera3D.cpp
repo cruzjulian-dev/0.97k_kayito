@@ -152,7 +152,7 @@ void CCamera3D::Toggle()
 			this->m_Default.IsLoad = true;
 		}
 
-		CreateNotice(((this->m_Enable) ? "Camara 3D Enabled" : "Camera 3D Disabled"), 1);
+		CreateNotice(((this->m_Enable) ? "Camara 3D Activada" : "Camara 3D Desactivada"), 1);
 	}
 }
 
@@ -162,7 +162,7 @@ void CCamera3D::Restore()
 	{
 		this->SetDefaultValue();
 
-		CreateNotice("Camera 3D Restored", 1);
+		CreateNotice("Camara 3D Restaurada", 1);
 	}
 }
 

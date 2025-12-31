@@ -125,7 +125,7 @@ LRESULT Controller::Keyboard(int nCode, WPARAM wParam, LPARAM lParam)
 
 						if (gController.AutoClick)
 						{
-							SetTimer(g_hWnd, WM_AUTOCLICKTIMER, 100, 0);
+							SetTimer(g_hWnd, WM_AUTOCLICKTIMER, 1, 0);
 						}
 						else
 						{
@@ -138,7 +138,7 @@ LRESULT Controller::Keyboard(int nCode, WPARAM wParam, LPARAM lParam)
 							MouseRButton = false;
 						}
 
-						CreateNotice(((gController.AutoClick) ? "Autoclick Enabled" : "Autoclick Disabled"), 1);
+						CreateNotice(((gController.AutoClick) ? "Autoclick Activado" : "Autoclick Desactivado"), 1);
 					}
 
 					break;
@@ -224,6 +224,8 @@ void Controller::CheckKeyboardKeys()
 		KeyState[VK_TAB] = 0;
 	}
 
+	// Permitir pickear items con la Barra Espaciadora
+	/*
 	if ((GetAsyncKeyStateCall(VK_SPACE) >> 0x0F)) // Space Pressed
 	{
 		if (!KeyState[VK_SPACE])
@@ -266,6 +268,7 @@ void Controller::CheckKeyboardKeys()
 	{
 		KeyState[VK_SPACE] = 0;
 	}
+	*/
 
 	((void(__cdecl*)()) 0x004C04A0)(); // Original Function
 }
