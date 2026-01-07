@@ -1099,7 +1099,8 @@ DWORD CItem::ItemValue(ITEM* ip, int goldType)
 		{
 			if (ip->Special[n] != 0 && ip->Type < GET_ITEM(12, 0))
 			{
-				ItemLevel += 25;
+				// Reduce la suba de precio al tener Skill o Adicional (Life)
+				//ItemLevel += 25;
 
 				break;
 			}
@@ -1125,63 +1126,68 @@ DWORD CItem::ItemValue(ITEM* ip, int goldType)
 			{
 				case 5:
 				{
-					ItemLevel += 4;
+					ItemLevel += 2;
 
 					break;
 				}
 
 				case 6:
 				{
-					ItemLevel += 10;
+					ItemLevel += 5;
 
 					break;
 				}
 
 				case 7:
 				{
-					ItemLevel += 25;
+					ItemLevel += 10;
 
 					break;
 				}
 
 				case 8:
 				{
-					ItemLevel += 45;
+					ItemLevel += 15;
 
 					break;
 				}
 
 				case 9:
 				{
-					ItemLevel += 65;
+					ItemLevel += 20;
 
 					break;
 				}
 
 				case 10:
 				{
-					ItemLevel += 95;
+					ItemLevel += 30;
 
 					break;
 				}
 
 				case 11:
 				{
-					ItemLevel += 135;
+					ItemLevel += 45;
 
 					break;
 				}
 			}
 
+			// Bloque que maneja precio para Alas S1, S2 y Customs.
+			/*
 			if ((ip->Type >= GET_ITEM(12, 0) && ip->Type <= GET_ITEM(12, 6)) // Wings
 			    || gCustomWing.GetInfoByIndex(ip->Type) != NULL) // Custom Wings
 			{
-				price = ((((ItemLevel + 40) * ItemLevel) * ItemLevel) * 11) + 40000000;
+				//price = ((((ItemLevel + 40) * ItemLevel) * ItemLevel) * 11) + 40000000;
 			}
 			else
 			{
 				price = ((((ItemLevel + 40) * ItemLevel) * ItemLevel) / 8) + 100;
 			}
+			*/
+
+			price = ((((ItemLevel + 40) * ItemLevel) * ItemLevel) / 8) + 100;
 
 			if (ip->Type >= GET_ITEM(0, 0) && ip->Type < GET_ITEM(6, 0))
 			{
@@ -1203,26 +1209,26 @@ DWORD CItem::ItemValue(ITEM* ip, int goldType)
 
 			if (m_ItemAddOption != 0)
 			{
-				price += ((m_ItemAddOption == 1) ? ((price * 60) / 100) : 0);
+				price += ((m_ItemAddOption == 1) ? ((price * 60) / 100) : 0); // +60
 
-				price += ((m_ItemAddOption == 2) ? ((price * 140) / 100) : 0);
+				price += ((m_ItemAddOption == 2) ? ((price * 140) / 100) : 0); // +80
 
-				price += ((m_ItemAddOption == 3) ? ((price * 280) / 100) : 0);
+				price += ((m_ItemAddOption == 3) ? ((price * 240) / 100) : 0); // +100
 
-				price += ((m_ItemAddOption == 4) ? ((price * 560) / 100) : 0);
+				price += ((m_ItemAddOption == 4) ? ((price * 360) / 100) : 0); // +120
 
-				price += ((m_ItemAddOption == 5) ? ((price * 760) / 100) : 0);
+				price += ((m_ItemAddOption == 5) ? ((price * 500) / 100) : 0); // +140
 
-				price += ((m_ItemAddOption == 6) ? ((price * 960) / 100) : 0);
+				price += ((m_ItemAddOption == 6) ? ((price * 660) / 100) : 0); // +160
 
-				price += ((m_ItemAddOption == 7) ? ((price * 1160) / 100) : 0);
+				price += ((m_ItemAddOption == 7) ? ((price * 840) / 100) : 0);  // +180
 			}
 
 			for (int n = 0; n < 6; n++)
 			{
 				if ((ip->Option1 & (1 << n)) != 0)
 				{
-					price += ((ip->Type < GET_ITEM(12, 0)) ? ((price * 100) / 100) : ((price * 25) / 100));
+					price += ((ip->Type < GET_ITEM(12, 0)) ? ((price * 120) / 100) : ((price * 50) / 100));
 				}
 			}
 		}

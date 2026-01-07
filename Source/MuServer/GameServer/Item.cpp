@@ -700,7 +700,8 @@ void CItem::Value()
 		{
 			if (this->m_SpecialIndex[n] != 0 && this->m_Index < GET_ITEM(12, 0))
 			{
-				ItemLevel += 25;
+				// Reduce la suba de precio al tener Skill o Adicional (Life)
+				//ItemLevel += 25;
 
 				break;
 			}
@@ -726,54 +727,56 @@ void CItem::Value()
 			{
 				case 5:
 				{
-					ItemLevel += 4;
+					ItemLevel += 2;
 
 					break;
 				}
 
 				case 6:
 				{
-					ItemLevel += 10;
+					ItemLevel += 5;
 
 					break;
 				}
 
 				case 7:
 				{
-					ItemLevel += 25;
+					ItemLevel += 10;
 
 					break;
 				}
 
 				case 8:
 				{
-					ItemLevel += 45;
+					ItemLevel += 15;
 
 					break;
 				}
 
 				case 9:
 				{
-					ItemLevel += 65;
+					ItemLevel += 20;
 
 					break;
 				}
 
 				case 10:
 				{
-					ItemLevel += 95;
+					ItemLevel += 30;
 
 					break;
 				}
 
 				case 11:
 				{
-					ItemLevel += 135;
+					ItemLevel += 45;
 
 					break;
 				}
 			}
 
+			// Bloque que maneja precio para Alas S1, S2 y Customs.
+			/*
 			if ((this->m_Index >= GET_ITEM(12, 0) && this->m_Index <= GET_ITEM(12, 6)) // Wings
 			    || gCustomWing.CheckCustomWingByItem(this->m_Index)) // Custom Wings
 			{
@@ -783,6 +786,9 @@ void CItem::Value()
 			{
 				price = ((((ItemLevel + 40) * ItemLevel) * ItemLevel) / 8) + 100;
 			}
+			*/
+
+			price = ((((ItemLevel + 40) * ItemLevel) * ItemLevel) / 8) + 100;
 
 			if (this->m_Index >= GET_ITEM(0, 0) && this->m_Index < GET_ITEM(6, 0))
 			{
@@ -808,22 +814,22 @@ void CItem::Value()
 
 				price += ((this->m_AddOption == 2) ? ((price * 140) / 100) : 0);
 
-				price += ((this->m_AddOption == 3) ? ((price * 280) / 100) : 0);
+				price += ((this->m_AddOption == 3) ? ((price * 240) / 100) : 0);
 
-				price += ((this->m_AddOption == 4) ? ((price * 560) / 100) : 0);
+				price += ((this->m_AddOption == 4) ? ((price * 360) / 100) : 0);
 
-				price += ((this->m_AddOption == 5) ? ((price * 760) / 100) : 0);
+				price += ((this->m_AddOption == 5) ? ((price * 500) / 100) : 0); 
 
-				price += ((this->m_AddOption == 6) ? ((price * 960) / 100) : 0);
+				price += ((this->m_AddOption == 6) ? ((price * 660) / 100) : 0); 
 
-				price += ((this->m_AddOption == 7) ? ((price * 1160) / 100) : 0);
+				price += ((this->m_AddOption == 7) ? ((price * 840) / 100) : 0); 
 			}
 
 			for (int n = 0; n < 6; n++)
 			{
 				if ((this->m_ExceOption & (1 << n)) != 0)
 				{
-					price += ((this->m_Index < GET_ITEM(12, 0)) ? ((price * 100) / 100) : ((price * 25) / 100));
+					price += ((this->m_Index < GET_ITEM(12, 0)) ? ((price * 120) / 100) : ((price * 50) / 100));
 				}
 			}
 		}
