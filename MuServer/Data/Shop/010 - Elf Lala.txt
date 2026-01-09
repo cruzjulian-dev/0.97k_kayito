@@ -4,17 +4,36 @@
 //SLOTS X = 0~7 , Y = 0~14 , * = Orden original
 //Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
 
-12,08	0	0	0	0	0	0	*	*	//Orb of Healing
-12,09	0	0	0	0	0	0	*	*	//Orb of Greater Defense
-12,10	0	0	0	0	0	0	*	*	//Orb of Greater Damage	
-12,11	0	0	0	0	0	0	*	*	//Orb of Summoning +0
-12,11	1	0	0	0	0	0	*	*	//Orb of Summoning +1
-12,11	2	0	0	0	0	0	*	*	//Orb of Summoning +2
-12,11	3	0	0	0	0	0	*	*	//Orb of Summoning +3
-12,11	4	0	0	0	0	0	*	*	//Orb of Summoning +4
-12,11	5	0	0	0	0	0	*	*	//Orb of Summoning +5
-12,11	6	0	0	0	0	0	*	*	//Orb of Summoning +6
-12,17	0	0	0	0	0	0	*	*	//Orb of Penetration
-12,18	0	0	0	0	0	0	*	*	//Orb of Ice Arrow
-
+14,003	00	255	0	0	0	0	*	*	// Large Healing Potion
+14,006	00	255	0	0	0	0	*	*	// Large Mana Potion
+04,007	02	50	0	0	0	0	*	*	//Bolts
+04,015	02	50	0	0	0	0	*	*	//Arrows
+12,008	00	0	0	0	0	0	*	*	//Orb of Healing
+12,009	00	0	0	0	0	0	*	*	//Orb of Greater Defense
+12,010	00	0	0	0	0	0	*	*	//Orb of Greater Damage	
+12,011	00	0	0	0	0	0	*	*	//Orb of Summoning +0
+12,011	01	0	0	0	0	0	*	*	//Orb of Summoning +1
+12,011	02	0	0	0	0	0	*	*	//Orb of Summoning +2
+12,011	03	0	0	0	0	0	*	*	//Orb of Summoning +3
+12,011	04	0	0	0	0	0	*	*	//Orb of Summoning +4
+12,011	05	0	0	0	0	0	*	*	//Orb of Summoning +5
+12,011	06	0	0	0	0	0	*	*	//Orb of Summoning +6
+12,017	00	0	0	0	0	0	*	*	//Orb of Penetration
+12,018	00	0	0	0	0	0	*	*	//Orb of Ice Arrow
+07,010	03	*	0	1	2	0	0	2	// Vine Helm  
+08,010	03	*	0	1	2	0	0	4	// Vine Armor 
+10,010	03	*	0	1	2	0	0	6	// Vine Gloves
+09,010	03	*	0	1	2	0	0	8	// Vine Pants 
+11,010	03	*	0	1	2	0	0	10	// Vine Boots 
+07,012	02	*	0	1	2	0	2	2	// Wind Helm  
+08,012	02	*	0	1	2	0	2	4	// Wind Armor 
+10,012	02	*	0	1	2	0	2	6	// Wind Gloves
+09,012	02	*	0	1	2	0	2	8	// Wind Pants 
+11,012	02	*	0	1	2	0	2	10	// Wind Boots
+07,014	01	*	0	1	2	0	4	2	// Guardian Helm  
+08,014	01	*	0	1	2	0	4	4	// Guardian Armor 
+10,014	01	*	0	1	2	0	4	6	// Guardian Gloves
+09,014	01	*	0	1	2	0	4	8	// Guardian Pants 
+11,014	01	*	0	1	2	0	4	10	// Guardian Boots
+04,005	04	*	1	1	2	0	*	*	// Silver Bow
 end

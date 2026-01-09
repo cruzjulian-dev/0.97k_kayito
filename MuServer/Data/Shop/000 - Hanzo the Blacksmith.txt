@@ -4,31 +4,44 @@
 //SLOTS X = 0~7 , Y = 0~14 , * = Orden original
 //Index	Level	Dur	Skill	Luck	Option	ExcOp	SlotX	SlotY	Comment
 
-12,19	0	0	0	0	0	0	*	*	//Death Stab
-12,07	0	0	0	0	0	0	*	*	//Twisting Slash
-12,12	0	0	0	0	0	0	*	*	//Rageful Blow
-12,13	0	0	0	0	0	0	*	*	//Impale
-12,16	0	0	0	0	0	0	*	*	//Fire Slash
+14,003	00	255	0	0	0	0	*	*	// Large Healing Potion x255
+14,006	00	255	0	0	0	0	*	*	// Large Mana Potion x255
+12,19	00	*	0	0	0	0	*	*	//Death Stab
+12,07	00	*	0	0	0	0	*	*	//Twisting Slash
+12,12	00	*	0	0	0	0	*	*	//Rageful Blow
+12,13	00	*	0	0	0	0	*	*	//Impale
+12,14	00	*	0	0	0	0	*	*	//Orb of Greater Fortitude
+12,16	00	*	0	0	0	0	*	*	//Fire Slash
 
-07,16	11	*	0	1	4	16	0	1	// Black Dragon Helm   (RT+DD)
-08,16	11	*	0	1	4	16	0	3	// Black Dragon Armor  (RT+DD)
-10,16	11	*	0	1	4	16	0	6	// Black Dragon Gloves (RT+DD)
-09,16	11	*	0	1	4	16	0	8	// Black Dragon Pants  (RT+DD)
-11,16	11	*	0	1	4	16	0	10	// Black Dragon Boots  (RT+DD)
+07,05	03	*	0	1	2	0	0	1	// Leather Helm  
+08,05	03	*	0	1	2	0	0	3	// Leather Armor 
+10,05	03	*	0	1	2	0	0	6	// Leather Gloves
+09,05	03	*	0	1	2	0	0	8	// Leather Pants 
+11,05	03	*	0	1	2	0	0	10	// Leather Boots 
 
-08,15	11	*	0	1	4	16	2	1	// Storm Crown Armor  (RT+DD)
-10,15	11	*	0	1	4	16	2	4	// Storm Crown Gloves (RT+DD)
-09,15	11	*	0	1	4	16	2	6	// Storm Crown Pants  (RT+DD)
-11,15	11	*	0	1	4	16	2	8	// Storm Crown Boots  (RT+DD)
-                                                                                            
-07,16	11	*	0	1	4	18	4	1	// Black Dragon Helm   (RT+RF)
-08,16	11	*	0	1	4	18	4	3	// Black Dragon Armor  (RT+RF)
-10,16	11	*	0	1	4	18	4	6	// Black Dragon Gloves (RT+RF)
-09,16	11	*	0	1	4	18	4	8	// Black Dragon Pants  (RT+RF)
-11,16	11	*	0	1	4	18	4	10	// Black Dragon Boots  (RT+RF)
+07,09	02	*	0	1	2	0	2	1	// Plate Helm  
+08,09	02	*	0	1	2	0	2	3	// Plate Armor 
+10,09	02	*	0	1	2	0	2	5	// Plate Gloves
+09,09	02	*	0	1	2	0	2	7	// Plate Pants 
+11,09	02	*	0	1	2	0	2	9	// Plate Boots 
 
-08,15	11	*	0	1	4	18	6	1	// Storm Crown Armor   (RT+RF)
-10,15	11	*	0	1	4	18	6	4	// Storm Crown Gloves  (RT+RF)
-09,15	11	*	0	1	4	18	6	6	// Storm Crown Pants   (RT+RF)
-11,15	11	*	0	1	4	18	6	8	// Storm Crown Boots   (RT+RF)
+07,01	01	*	0	1	2	0	4	1	// Dragon Helm  
+08,01	01	*	0	1	2	0	4	3	// Dragon Armor 
+10,01	01	*	0	1	2	0	4	6	// Dragon Gloves
+09,01	01	*	0	1	2	0	4	8	// Dragon Pants 
+11,01	01	*	0	1	2	0	4	10	// Dragon Boots 
+
+06,001	00	*	1	1	2	0	*	*	// Horn Shield
+06,006	01	*	1	1	2	0	*	*	// Skull Shield
+06,007	02	*	1	1	2	0	*	*	// Spiked Shield
+06,005	03	*	1	1	2	0	*	*	// Dragon Slayer Shield
+06,011	04	*	1	1	2	0	*	*	// Serpent Shield
+
+02,001	01	*	1	1	2	0	0	12	// Morning Star
+01,005	02	*	1	1	2	0	1	12	// Battle Axe
+00,013	03	*	1	1	2	0	3	12	// Double Blade
+00,012	04	*	1	1	2	0	4	12	// Heliacal Sword
+03,000	05	*	1	1	2	0	6	11	// Light Spear
+
+
 end

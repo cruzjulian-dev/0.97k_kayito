@@ -30,7 +30,7 @@ DefenseTime=4
 ; Value = HealConstA + (Player->Energy / HealConstB);
 ;==================================================
 HealConstA=5
-HealConstB=5
+HealConstB=32
 
 ;==================================================
 ; Greater Defense Skill Settings
@@ -39,13 +39,13 @@ HealConstB=5
 ; Time -> In Seconds
 ; Time = GreaterDefenseTime
 ;==================================================
-GreaterDefenseConstA=2
-GreaterDefenseConstB=8
+GreaterDefenseConstA=3
+GreaterDefenseConstB=32
 GreaterDefenseRateDW=100
 GreaterDefenseRateDK=100
 GreaterDefenseRateFE=100
 GreaterDefenseRateMG=100
-GreaterDefenseTime=60
+GreaterDefenseTime=300
 
 ;==================================================
 ; Greater Damage Skill Settings
@@ -55,12 +55,12 @@ GreaterDefenseTime=60
 ; Time = GreaterDamageTime
 ;==================================================
 GreaterDamageConstA=3
-GreaterDamageConstB=7
+GreaterDamageConstB=30
 GreaterDamageRateDW=100
 GreaterDamageRateDK=100
 GreaterDamageRateFE=100
 GreaterDamageRateMG=100
-GreaterDamageTime=60
+GreaterDamageTime=300
 
 ;==================================================
 ; Summon Monster Skill Settings
