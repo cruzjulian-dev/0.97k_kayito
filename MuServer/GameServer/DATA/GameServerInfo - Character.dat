@@ -9,7 +9,7 @@ GeneralDamageRatePvP=100
 GeneralDamageRatePvM=100
 
 ; damage = (damage *  ReflectDamageRatePvP) / 100
-ReflectDamageRatePvP=20
+ReflectDamageRatePvP=100
 
 ; damage = (damage *  ReflectDamageRatePvM) / 100
 ReflectDamageRatePvM=100
@@ -38,7 +38,7 @@ DWDamageRateToDK=100
 DWDamageRateToFE=100
 DWDamageRateToMG=100
 
-DKDamageRateToDW=100
+DKDamageRateToDW=50
 DKDamageRateToDK=100
 DKDamageRateToFE=100
 DKDamageRateToMG=100

@@ -182,8 +182,6 @@ bool CAttack::Attack(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, bool send, in
 
 #pragma region DAMAGE_CALC
 
-	BYTE flag = 0;
-
 	BYTE miss = 0;
 
 	WORD effect = DAMAGE_TYPE_NORMAL;
@@ -266,11 +264,14 @@ bool CAttack::Attack(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, bool send, in
 	{
 		if (lpTarget->Type == OBJECT_USER)
 		{
-			damage = (damage * gServerInfo.m_GeneralDamageRatePvP) / 100;
+			// Fix Reflect. Devuelve exactamente lo que debería independientemente del DamageRateXXtoXX
+			if (effect != DAMAGE_TYPE_REFLECT) {
+				damage = (damage * gServerInfo.m_GeneralDamageRatePvP) / 100;
 
-			damage = (damage * gServerInfo.m_DamageRatePvP[lpObj->Class]) / 100;
+				damage = (damage * gServerInfo.m_DamageRatePvP[lpObj->Class]) / 100;
 
-			damage = (damage * gServerInfo.m_DamageRateTo[lpObj->Class][lpTarget->Class]) / 100;
+				damage = (damage * gServerInfo.m_DamageRateTo[lpObj->Class][lpTarget->Class]) / 100;
+			}
 		}
 		else
 		{
@@ -392,6 +393,8 @@ bool CAttack::Attack(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, bool send, in
 
 #pragma region ATTACK_FINISH
 
+	BYTE flag = 0;
+
 	if (damage > 0)
 	{
 		if (lpTarget->Type == OBJECT_USER)
@@ -425,11 +428,22 @@ bool CAttack::Attack(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, bool send, in
 				}
 			}
 			
-			if (lpTarget->Inventory[8].IsItem() == false || (lpTarget->Inventory[8].m_Index == GET_ITEM(13, 2) && gServerInfo.m_PetUniriaEnableStuck != 0) || (lpTarget->Inventory[8].m_Index == GET_ITEM(13, 3) && gServerInfo.m_PetDinorantEnableStuck != 0))
+			if ((GetLargeRand() % 100) < gServerInfo.m_DamageStuckRate[lpTarget->Class])
 			{
-				if ((GetLargeRand() % 100) < gServerInfo.m_DamageStuckRate[lpTarget->Class])
+				flag = 1;
+
+				if (lpTarget->Inventory[8].IsItem())
 				{
-					flag = 1;
+					// Uniria
+					if (lpTarget->Inventory[8].m_Index == GET_ITEM(13, 2) && gServerInfo.m_PetUniriaEnableStuck == 0)
+					{
+						flag = 0;
+					}
+					// Dinorant
+					else if (lpTarget->Inventory[8].m_Index == GET_ITEM(13, 3) && gServerInfo.m_PetDinorantEnableStuck == 0)
+					{
+						flag = 0;
+					}
 				}
 			}
 		}
