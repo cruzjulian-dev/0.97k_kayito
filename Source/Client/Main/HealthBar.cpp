@@ -281,7 +281,7 @@ __declspec(naked) void CHealthBar::DrawPointingHealthBar()
 	static char* MonsterName;
 
 	static MONSTER_HEALTH_BAR* lpHealthBar;
-	static float LifeBarWidth = 200.0f;
+	static float LifeBarWidth = 120.0f;
 	static char LifeDisplay[64];
 
 	_asm

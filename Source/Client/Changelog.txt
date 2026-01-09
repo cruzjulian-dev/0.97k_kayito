@@ -23,6 +23,7 @@ Update 3:
 - Se deshabilito el pickeo de items con barra espaciadora
 - Fix Precio al vender items NPC con mas de 4 opciones de Life (+16 para arriba)
 - Ajuste BuyPrice/SellPrice de Items con el NPC para evitar precios excesivos
+- Se ajusto el HealthBar al apuntar un mob. Ahora es menos ancha que la anterior.
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
