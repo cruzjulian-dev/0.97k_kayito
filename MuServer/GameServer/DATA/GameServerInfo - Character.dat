@@ -63,10 +63,10 @@ PetUniriaEnableStuck=1
 PetDinorantEnableStuck=1
 
 ; Rate of Stuck when getting damage (0 ~ 100)
-DWDamageStuckRate=10
-DKDamageStuckRate=10
-FEDamageStuckRate=10
-MGDamageStuckRate=10
+DWDamageStuckRate=100
+DKDamageStuckRate=100
+FEDamageStuckRate=100
+MGDamageStuckRate=100
 
 ;==================================================
 ; Character Damage Multiplier Settings

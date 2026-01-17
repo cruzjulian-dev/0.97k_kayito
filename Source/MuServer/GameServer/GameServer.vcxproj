@@ -193,6 +193,7 @@
     <ClInclude Include="Shop.h" />
     <ClInclude Include="ShopManager.h" />
     <ClInclude Include="Skill.h" />
+    <ClInclude Include="SkillDamage.h" />
     <ClInclude Include="SkillHitBox.h" />
     <ClInclude Include="SkillManager.h" />
     <ClInclude Include="SocketManager.h" />
@@ -293,6 +294,7 @@
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="ShopManager.cpp" />
     <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="SkillDamage.cpp" />
     <ClCompile Include="SkillHitBox.cpp" />
     <ClCompile Include="SkillManager.cpp" />
     <ClCompile Include="SocketManager.cpp" />

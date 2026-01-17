@@ -1,0 +1,69 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
+// # https://www.facebook.com/ssemuemulator
+// # https://www.youtube.com/@ssemu
+// # ---------------------------------------------------------------------------
+// # © 2023 SetecSoft Development
+// # This file is part of the SSeMU MuOnline Server files.
+// #############################################################################
+
+0
+// -------------------------------------------------------------
+//              [0~10000]    	[0~10000]
+// SkillIndex   DmgRatePvP   	DmgRatePvM	Comment
+// -------------------------------------------------------------
+	1	100		100		//Poison	
+	2	100		100		//Meteorite	
+	3	100		100		//Lightning	
+	4	100		100		//Fire Ball	
+	5	100		100		//Flame
+	7	100		100		//Ice
+        8	100		100		//Twister
+        9	100		100		//Evil Spirit	
+        10	100		100		//Hell Fire	
+        11	100		100		//Power Wave	
+        12	100		100		//Aqua Beam	
+        13	100		100		//Blast		
+	14	100		100		//Inferno
+	17	100		100		//Energy Ball
+	19	100		100		//Falling Slash	
+	20	100		100		//Lunge		
+	21	100		100		//Uppercut	
+	22	100		100		//Cyclone	
+	23	100		100		//Slash		
+	24	100		100		//Triple Shot	
+	30	100		100		//Summon Goblin		
+	31	100		100		//Summon Stone Golem	
+	32	100		100		//Summon Assassin	
+	33	100		100		//Summon Elite Yeti	
+	34	100		100		//Summon Dark Knight	
+	35	100		100		//Summon Bali	
+	36	100		100		//Summon Soldier	
+	41	100		100		//Twisting Slash	
+	42	100		100		//Rageful Blow	
+	43	400		100		//Death Stab		
+	47	100		100		//Impale		
+	48	100		100		//Greater Life			
+	51	100		100		//Ice Arrow	
+	52	100		100		//Penetration	
+	55	100		100		//Fire Slash		
+	56	100		100		//Power Slash			
+end
+
+1
+// -----------------------------------------------------------
+//              [0~100]		[0~100]
+// SkillIndex   EffectRatePvP  	EffectRatePvM	Comment
+// -----------------------------------------------------------
+	1	100		100		//Poison		
+	3	100		100		//Lightning	
+	7	0		100		//Ice
+	19	100		100		//Falling Slash	
+	20	100		100		//Lunge		
+	21	100		100		//Uppercut	
+	22	100		100		//Cyclone	
+	23	100		100		//Slash		
+	51	100		100		//Ice Arrow	
+	55	100		100		//Fire Slash		
+end

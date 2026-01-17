@@ -372,6 +372,9 @@
     <ClInclude Include="GoldenArcherBingo.h">
       <Filter>Events\GoldenArcher</Filter>
     </ClInclude>
+    <ClInclude Include="SkillDamage.h">
+      <Filter>Damage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math.cpp">
@@ -667,6 +670,9 @@
     </ClCompile>
     <ClCompile Include="GoldenArcherBingo.cpp">
       <Filter>Events\GoldenArcher</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillDamage.cpp">
+      <Filter>Damage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -41,6 +41,7 @@
 #include "QuestReward.h"
 #include "ResetTable.h"
 #include "ShopManager.h"
+#include "SkillDamage.h"
 #include "SkillHitBox.h"
 #include "SkillManager.h"
 #include "Util.h"
@@ -326,6 +327,8 @@ void CServerInfo::ReadSkillInfo()
 	gSkillHitBox.Load(gPath.GetFullPath("Skill\\SkillElect.hit"));
 
 	gSkillManager.Load(gPath.GetFullPath("Skill\\Skill.txt"));
+
+	gSkillDamage.Load(gPath.GetFullPath("Skill\\SkillDamage.txt"));
 
 	LogAdd(LOG_BLUE, "[ServerInfo] Skill loaded successfully");
 }
