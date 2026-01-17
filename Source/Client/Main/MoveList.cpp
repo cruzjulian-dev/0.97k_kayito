@@ -19,7 +19,7 @@ CMoveList::CMoveList()
 
 	this->SectionWidth = 40.0f;
 
-	this->MainWidth = ((this->SectionWidth * 3.5f) + 10.0f);
+	this->MainWidth = ((this->SectionWidth * 3.5f) + 40.0f);
 
 	this->m_MoveList.clear();
 }
@@ -46,12 +46,12 @@ void CMoveList::Toggle()
 		return;
 	}
 
-	if (CheckRightInterfaces())
-	{
-		this->MoveListSwitch = false;
-
-		return;
-	}
+	//if (CheckRightInterfaces())
+	//{
+	//	this->MoveListSwitch = false;
+	//
+	//	return;
+	//}
 
 	if (gEventTimer.GetEventTimerState())
 	{
@@ -92,12 +92,12 @@ void CMoveList::UpdateMouse()
 		return;
 	}
 
-	if (CheckRightInterfaces())
-	{
-		this->MoveListSwitch = false;
-
-		return;
-	}
+	//if (CheckRightInterfaces())
+	//{
+	//	this->MoveListSwitch = false;
+	//
+	//	return;
+	//}
 
 	if (IsWorkZone((int)this->MainPosX, (int)this->MainPosY, (int)this->MainWidth, (int)this->MainHeight))
 	{
@@ -156,9 +156,9 @@ void CMoveList::RenderFrame()
 
 	int PosX = (int)this->MainPosX + 5;
 
-	RenderText(PosX, (int)this->MainPosY + 20, "Map", REAL_WIDTH((int)this->SectionWidth), RT3_SORT_CENTER, NULL);
+	RenderText(PosX, (int)this->MainPosY + 20, "Map", REAL_WIDTH((int)this->SectionWidth + 30.0f), RT3_SORT_CENTER, NULL);
 
-	PosX += ((int)this->SectionWidth);
+	PosX += ((int)this->SectionWidth + 30.0f);
 
 	RenderText(PosX, (int)this->MainPosY + 20, "Level", REAL_WIDTH((int)this->SectionWidth), RT3_SORT_CENTER, NULL);
 
@@ -256,13 +256,13 @@ void CMoveList::RenderMapsList()
 
 			if (it->CanMove)
 			{
-				if (IsWorkZone(PosX, PosY, (int)(this->MainWidth - 10), 10))
+				if (IsWorkZone(PosX, PosY, (int)(this->MainWidth - 10), 11))
 				{
 					EnableAlphaTest(true);
 
 					glColor4f(0.8f, 0.8f, 0.1f, 0.6f);
 
-					RenderColor((float)PosX, (float)PosY, this->MainWidth - 10.0f, 10.0f);
+					RenderColor((float)PosX, (float)PosY, this->MainWidth - 10.0f, 11.0f);
 
 					glColor3f(1.0f, 1.0f, 1.0f);
 
@@ -278,9 +278,9 @@ void CMoveList::RenderMapsList()
 
 			SetBackgroundTextColor = Color4b(255, 255, 255, 0);
 
-			RenderText(PosX, PosY, it->MapName, REAL_WIDTH((int)this->SectionWidth), RT3_SORT_CENTER, NULL);
+			RenderText(PosX, PosY, it->MapName, REAL_WIDTH((int)this->SectionWidth + 30.0f), RT3_SORT_CENTER, NULL);
 
-			PosX += ((int)this->SectionWidth);
+			PosX += ((int)this->SectionWidth + 30.0f);
 
 			/*
 			if (it->MinLevel == -1) // MinLevel -1
@@ -325,10 +325,10 @@ void CMoveList::RenderMapsList()
 			if (it->AccountLevel != -1 && it->AccountLevel > 0)
 			{
 				SetTextColor = Color4b(255, 0, 0, 255);
-				RenderText(PosX, PosY, "[VIP]", REAL_WIDTH((int)(this->SectionWidth * 0.5f)), RT3_SORT_CENTER, NULL);
+				RenderText(PosX, PosY, "VIP", REAL_WIDTH((int)(this->SectionWidth * 0.5f)), RT3_SORT_CENTER, NULL);
 			}
 
-			PosY += 12;
+			PosY += 13;
 
 			PosX = (int)this->MainPosX + 5;
 		}
@@ -378,7 +378,7 @@ bool CMoveList::CheckClickOnMap()
 			}
 		}
 
-		PosY += 12;
+		PosY += 13;
 	}
 
 	return false;
@@ -443,7 +443,7 @@ void CMoveList::GCMoveListRecv(PMSG_MOVE_LIST_RECV* lpMsg)
 		this->m_MoveList.push_back(info);
 	}
 
-	this->MainHeight = this->MainBaseHeight + (lpMsg->count * 12.0f);
+	this->MainHeight = this->MainBaseHeight + (lpMsg->count * 13.0f);
 
 	this->MainHeight = (this->MainHeight > 430.0f) ? 430.0f : this->MainHeight;
 }

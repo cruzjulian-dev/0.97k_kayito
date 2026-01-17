@@ -15,6 +15,9 @@ Update 3:
 - Ajuste BuyPrice/SellPrice de Items con el NPC para evitar precios excesivos
 - Fix Reflect GS (se ajusta automaticamente y devuelve lo que debería)
 - Fix Stuck on Satan/Hadita 
+- Quito penalización de experiencia por tener +10 niveles más que el Monster
+- Quito No-PvP en pjs con Nivel menor a 5.
+- Modifico drop de zen de los mobs. Ahora tira más "parejo" minimo 80% y máximo 100%.
 
 Prox Update:
 - [Falta] SkillDamage.txt para configurar balance.

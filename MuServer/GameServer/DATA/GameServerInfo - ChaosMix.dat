@@ -78,10 +78,10 @@ DevilSquareMixCost3_AL2=400000
 DevilSquareMixCost3_AL3=400000
 
 ; Devil Square Entrance 4 Mix Rate
-DevilSquareMixRate4_AL0=80
-DevilSquareMixRate4_AL1=80
-DevilSquareMixRate4_AL2=80
-DevilSquareMixRate4_AL3=80
+DevilSquareMixRate4_AL0=30
+DevilSquareMixRate4_AL1=30
+DevilSquareMixRate4_AL2=30
+DevilSquareMixRate4_AL3=30
 ; Devil Square Entrance 4 Mix Cost
 DevilSquareMixCost4_AL0=700000
 DevilSquareMixCost4_AL1=700000

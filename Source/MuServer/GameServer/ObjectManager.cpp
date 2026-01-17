@@ -819,7 +819,8 @@ void CObjectManager::CharacterCalcExperienceAlone(LPOBJ lpObj, LPOBJ lpMonster, 
 
 	int level = ((lpMonster->Level + 25) * lpMonster->Level) / 3;
 
-	level = (((lpMonster->Level + 10) < lpObj->Level) ? ((level * (lpMonster->Level + 10)) / lpObj->Level) : level);
+	// Quito penalización de experiencia por tener +10 niveles más que el Monster
+	//level = (((lpMonster->Level + 10) < lpObj->Level) ? ((level * (lpMonster->Level + 10)) / lpObj->Level) : level);
 
 	if (lpMonster->Level >= 65)
 	{
@@ -842,7 +843,11 @@ void CObjectManager::CharacterCalcExperienceAlone(LPOBJ lpObj, LPOBJ lpMonster, 
 
 	experience = (experience * gExperienceTable.GetExperienceRate(lpObj)) / 100;
 
-	lpMonster->Money += (DWORD)experience;
+	// Formula original para calcular el Zen del Mob en base a la experience.
+	//lpMonster->Money += (DWORD)experience;
+	
+	// Nueva formula para el Zen. Se basa en el Nivel del Monster.
+	lpMonster->Money += (((lpMonster->Level + 25) * lpMonster->Level) / 3) * 10;
 
 	experience = (((lpObj->Experience + experience) < lpObj->NextExperience) ? experience : (lpObj->NextExperience - lpObj->Experience));
 
@@ -917,10 +922,13 @@ void CObjectManager::CharacterCalcExperienceParty(LPOBJ lpObj, LPOBJ lpMonster, 
 
 	int level = ((lpMonster->Level + 25) * lpMonster->Level) / 3;
 
+	// Quito penalización de experiencia por tener +10 niveles más que el Monster
+	/*
 	if ((lpMonster->Level + 10) < PartyLevel)
 	{
 		level = (level * (lpMonster->Level + 10)) / PartyLevel;
 	}
+	*/
 
 	if (lpMonster->Level >= 65)
 	{
@@ -959,7 +967,11 @@ void CObjectManager::CharacterCalcExperienceParty(LPOBJ lpObj, LPOBJ lpMonster, 
 
 		experience = (experience * gExperienceTable.GetExperienceRate(lpTarget)) / 100;
 
-		lpMonster->Money += (DWORD)(experience / PartyCount);
+		// Formula original para calcular el Zen del Mob en base a la experience.
+		//lpMonster->Money += (DWORD)(experience / PartyCount);
+		
+		// Nueva formula para el Zen. Se basa en el Nivel del Monster.
+		lpMonster->Money += ((((lpMonster->Level + 25) * lpMonster->Level) / 3) * 10) / PartyCount;
 
 		experience = (((lpTarget->Experience + experience) < lpTarget->NextExperience) ? experience : (lpTarget->NextExperience - lpTarget->Experience));
 

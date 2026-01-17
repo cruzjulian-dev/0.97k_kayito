@@ -798,10 +798,13 @@ bool CAttack::CheckPlayerTarget(LPOBJ lpObj, LPOBJ lpTarget)
 		return false;
 	}
 
+	// Quito el No-PvP a jugadores con Nivel menor que 5.
+	/*
 	if (lpObj->Level <= 5 || lpTarget->Level <= 5)
 	{
 		return false;
 	}
+	*/
 
 	if (gMapManager.GetMapNonPK(lpTarget->Map) != 0)
 	{

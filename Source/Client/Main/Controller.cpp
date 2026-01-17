@@ -117,7 +117,7 @@ LRESULT Controller::Keyboard(int nCode, WPARAM wParam, LPARAM lParam)
 		{
 			switch (wParam)
 			{
-				case VK_F9:
+				case VK_F8:
 				{
 					if (GetForegroundWindow() == g_hWnd)
 					{

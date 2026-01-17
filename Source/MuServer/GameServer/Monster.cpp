@@ -124,15 +124,24 @@ void gObjMonsterDieGiveItem(LPOBJ lpObj, LPOBJ lpTarget)
 	}
 	else if (lpObj->Money > 0 && (GetLargeRand() % ((lpObj->MoneyRate == 0) ? 1 : lpObj->MoneyRate)) < 10)
 	{
-		int money = ((int)lpObj->Money * gServerInfo.m_MoneyAmountDropRate[lpTarget->AccountLevel]) / 100;
+		int maxMoney = ((int)lpObj->Money * gServerInfo.m_MoneyAmountDropRate[lpTarget->AccountLevel]) / 100;
 
-		money = (money * lpTarget->MoneyAmountDropRate) / 100;
+		maxMoney = (maxMoney * lpTarget->MoneyAmountDropRate) / 100;
 
-		if (money > 0)
+		if (maxMoney > 0)
 		{
-			if ((money = (GetLargeRand() % money)) > 0)
+			// Definimos un límite inferior (por ejemplo, el 80% del total)
+			int minMoney = (maxMoney * 80) / 100;
+
+			// Calculamos la diferencia entre el máximo y el mínimo (el 20% restante)
+			int rango = maxMoney - minMoney;
+
+			// El resultado será: El mínimo (80%) + un aleatorio sobre la diferencia (0 a 20%)
+			int finalMoney = minMoney + (GetLargeRand() % (rango + 1));
+
+			if (finalMoney > 0) 
 			{
-				gMap[lpObj->Map].MoneyItemDrop(money, lpObj->X, lpObj->Y);
+				gMap[lpObj->Map].MoneyItemDrop(finalMoney, lpObj->X, lpObj->Y);
 			}
 		}
 	}

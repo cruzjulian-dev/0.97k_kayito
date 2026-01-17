@@ -99,16 +99,16 @@ GuildWarWinPointsGain_Normal=1
 ; Experience Settings
 ;==================================================
 ; Experience rate gained in the server when killing monsters
-AddExperienceRate_AL0=1000
-AddExperienceRate_AL1=1000
-AddExperienceRate_AL2=1000
-AddExperienceRate_AL3=1000
+AddExperienceRate_AL0=500
+AddExperienceRate_AL1=500
+AddExperienceRate_AL2=500
+AddExperienceRate_AL3=500
 
 ; Experience rate gained in events reward (Devil Square, Blood Castle)
-AddEventExperienceRate_AL0=100
-AddEventExperienceRate_AL1=100
-AddEventExperienceRate_AL2=100
-AddEventExperienceRate_AL3=100
+AddEventExperienceRate_AL0=550
+AddEventExperienceRate_AL1=550
+AddEventExperienceRate_AL2=550
+AddEventExperienceRate_AL3=550
 
 ;==================================================
 ; Item Drop Settings
@@ -117,10 +117,10 @@ AddEventExperienceRate_AL3=100
 ItemDropTime=30
 
 ; Rate of the drop of the items
-ItemDropRate_AL0=50
-ItemDropRate_AL1=50
-ItemDropRate_AL2=50
-ItemDropRate_AL3=50
+ItemDropRate_AL0=100
+ItemDropRate_AL1=100
+ItemDropRate_AL2=100
+ItemDropRate_AL3=100
 
 ;==================================================
 ; Money Drop Settings
@@ -180,7 +180,7 @@ ShopItemBlockExc=0
 ; Level Up Settings
 ;==================================================
 ; Maximum Character Level (MAX: 1000)
-MaxCharacterLevel=400
+MaxCharacterLevel=350
 
 ; Maximum simultaneous levels increase per experience gained
 MaxLevelUp=1
@@ -231,48 +231,48 @@ CharacterDeleteMaxLevel_AL3=220
 ; Party Settings
 ;==================================================
 ; Maximum Level difference to make a party
-PartyLevelDifference=130
+PartyLevelDifference=280
 
 ; Time to leave the party after disconnect (In Seconds)
 PartyReconnectTime=300
 
 ; Experience rate gained in the server when in party with the same class
-PartyGeneralExperience1=50
-PartyGeneralExperience2=125
-PartyGeneralExperience3=150
-PartyGeneralExperience4=175
-PartyGeneralExperience5=200
+PartyGeneralExperience1=100
+PartyGeneralExperience2=105
+PartyGeneralExperience3=110
+PartyGeneralExperience4=115
+PartyGeneralExperience5=120
 
 ; Experience rate gained in the server when in party with different class
-PartySpecialExperience1=50
-PartySpecialExperience2=125
-PartySpecialExperience3=150
-PartySpecialExperience4=175
-PartySpecialExperience5=200
+PartySpecialExperience1=100
+PartySpecialExperience2=150
+PartySpecialExperience3=300
+PartySpecialExperience4=400
+PartySpecialExperience5=500
 
 ;==================================================
 ; Potion Settings
 ;==================================================
 ; Rate of Life recovery with Apple
-ApplePotionRate=10
+ApplePotionRate=4
 
 ; Rate of Life recovery with Small Life Potion
-SmallLifePotionRate=20
+SmallLifePotionRate=7
 
 ; Rate of Life recovery with Middle Life Potion
-MidleLifePotionRate=30
+MidleLifePotionRate=10
 
 ; Rate of Life recovery with Large Life Potion
-LargeLifePotionRate=40
+LargeLifePotionRate=13
 
 ; Rate of Mana recovery with Small Mana Potion
-SmallManaPotionRate=20
+SmallManaPotionRate=10
 
 ; Rate of Mana recovery with Middle Mana Potion
-MidleManaPotionRate=30
+MidleManaPotionRate=15
 
 ; Rate of Mana recovery with Large Mana Potion
-LargeManaPotionRate=40
+LargeManaPotionRate=20
 
 ;==================================================
 ; Transformation Ring Settings

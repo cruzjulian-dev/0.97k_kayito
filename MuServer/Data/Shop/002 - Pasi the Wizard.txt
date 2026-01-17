@@ -21,10 +21,30 @@
 15,14	0	0	0	0	0	0	*	*	//Teleport Ally
 15,15	0	0	0	0	0	0	*	*	//Soul Barrier
 
-07,18	11	*	0	1	4	16	0	4	// Grand Soul Helm   (RT+DD)
-08,18	11	*	0	1	4	16	0	6	// Grand Soul Armor  (RT+DD)
-10,18	11	*	0	1	4	16	0	9	// Grand Soul Gloves (RT+DD)
-09,18	11	*	0	1	4	16	0	11	// Grand Soul Pants  (RT+DD)
-11,18	11	*	0	1	4	16	0	13	// Grand Soul Boots  (RT+DD)
+07,02	03	*	0	1	2	0	0	4	// Pad Helm  
+08,02	03	*	0	1	2	0	0	6	// Pad Armor 
+10,02	03	*	0	1	2	0	0	8	// Pad Gloves
+09,02	03	*	0	1	2	0	0	10	// Pad Pants 
+11,02	03	*	0	1	2	0	0	12	// Pad Boots 
 
+07,04	02	*	0	1	2	0	2	4	// Bone Helm  
+08,04	02	*	0	1	2	0	2	6	// Bone Armor 
+10,04	02	*	0	1	2	0	2	8	// Bone Gloves
+09,04	02	*	0	1	2	0	2	10	// Bone Pants 
+11,04	02	*	0	1	2	0	2	12	// Bone Boots 
+
+07,03	01	*	0	1	2	0	4	4	// Legendary Helm  
+08,03	01	*	0	1	2	0	4	6	// Legendary Armor 
+10,03	01	*	0	1	2	0	4	8	// Legendary Gloves
+09,03	01	*	0	1	2	0	4	10	// Legendary Pants 
+11,03	01	*	0	1	2	0	4	12	// Legendary Boots 
+
+14,003	00	255	0	0	0	0	*	*	// Large Healing Potion x255
+14,006	00	255	0	0	0	0	*	*	// Large Mana Potion x255
+
+06,000	03	*	0	1	2	0	*	*	// Small Shield
+06,006	05	*	1	1	2	0	*	*	// Skull Shield
+
+05,000	03	*	0	1	2	0	*	*	// Skull Staff
+05,005	05	*	0	1	2	0	*	*	// Legendary Staff
 end

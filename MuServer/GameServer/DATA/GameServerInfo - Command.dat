@@ -25,10 +25,10 @@ CommandResetAutoEnable_AL2=1
 CommandResetAutoEnable_AL3=1
 
 ; Required level to use "/reset"
-CommandResetLevel_AL0=400
-CommandResetLevel_AL1=400
-CommandResetLevel_AL2=400
-CommandResetLevel_AL3=400
+CommandResetLevel_AL0=350
+CommandResetLevel_AL1=350
+CommandResetLevel_AL2=350
+CommandResetLevel_AL3=350
 
 ; Character level after utilizing "/reset"
 CommandResetStartLevel_AL0=1

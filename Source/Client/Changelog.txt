@@ -19,12 +19,14 @@ Update 3:
 - Muestra mensaje con HWID al estar baneado.
 - Agregado InfoBoss (Cliente - Servidor)
 - Ajuste a la Camara 3D. Se ve más cercano al ingresar al juego.
-- Se cambio la , por . al recoger zen y ver precio en el movelist
 - Se deshabilito el pickeo de items con barra espaciadora
 - Fix Precio al vender items NPC con mas de 4 opciones de Life (+16 para arriba)
 - Ajuste BuyPrice/SellPrice de Items con el NPC para evitar precios excesivos
 - Se ajusto el HealthBar al apuntar un mob. Ahora es menos ancha que la anterior.
+- Se quito el Check que no permitía abrir el MoveList si habian CheckRightInterfaces abiertas.
+- Se corrigio el archivo Skill.ozj que tenía cambiado de lugar los skill FireBall y Flame
+- Se cambio el AutoClick a la tecla F8
+- Se ajusto el MoveList, se agrandó la columna Map para que entren bien los nombres de los mapas en resoluciones bajas
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
-- [Falta] Modificar columna MoveList para que primero este VIP | Mapa | Lvl | Cost
