@@ -121,7 +121,7 @@ void CSkillDamage::SetInfo(int type, SKILL_DAMAGE_INFO info)
 	}
 }
 
-int CSkillDamage::GetDamageRate(CSkill* lpSkill, int damage, bool isPvP)
+int CSkillDamage::GetDamageRate(CSkill* lpSkill, int damage, int type)
 {
 	if (lpSkill != 0)
 	{
@@ -131,7 +131,7 @@ int CSkillDamage::GetDamageRate(CSkill* lpSkill, int damage, bool isPvP)
 		{
 			int rate = 100;
 			
-			if (isPvP) 
+			if (type == OBJECT_USER)
 			{
 				rate = it->second.RatePvP;
 
@@ -147,7 +147,7 @@ int CSkillDamage::GetDamageRate(CSkill* lpSkill, int damage, bool isPvP)
 	return damage;
 }
 
-int CSkillDamage::GetEffectRate(CSkill* lpSkill, bool isPvP) // OK
+int CSkillDamage::GetEffectRate(CSkill* lpSkill, int type) // OK
 {
 	if (lpSkill != 0)
 	{
@@ -157,7 +157,7 @@ int CSkillDamage::GetEffectRate(CSkill* lpSkill, bool isPvP) // OK
 		{
 			int rate = 100;
 
-			if (isPvP)
+			if (type == OBJECT_USER)
 			{
 				rate = it->second.RatePvP;
 

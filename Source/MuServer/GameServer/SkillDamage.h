@@ -25,9 +25,9 @@ public:
 
 	void SetInfo(int type, SKILL_DAMAGE_INFO info);
 
-	int GetDamageRate(CSkill* lpSkill, int damage, bool isPvP);
+	int GetDamageRate(CSkill* lpSkill, int damage, int type);
 
-	int GetEffectRate(CSkill* lpSkill, bool isPvP);
+	int GetEffectRate(CSkill* lpSkill, int type);
 
 private:
 

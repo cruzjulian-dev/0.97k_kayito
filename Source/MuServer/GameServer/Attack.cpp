@@ -868,21 +868,10 @@ bool CAttack::ApplySkillEffect(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, int
 		return false;
 	}
 
-	if (lpTarget->Type == OBJECT_USER)
+	if (gSkillDamage.GetEffectRate(lpSkill, lpTarget->Type) == 0)
 	{
-		if (gSkillDamage.GetEffectRate(lpSkill, true) == 0)
-		{
-			return 0;
-		}
+		return 0;
 	}
-	else {
-
-		if (gSkillDamage.GetEffectRate(lpSkill, false) == 0)
-		{
-			return 0;
-		}
-	}
-	
 
 	switch (lpSkill->m_skill)
 	{
@@ -1121,14 +1110,7 @@ int CAttack::GetAttackDamage(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, WORD*
 
 	damage = ((damage < 0) ? 0 : damage);
 
-	if (lpTarget->Type == OBJECT_USER) {
-
-		return gSkillDamage.GetDamageRate(lpSkill, damage, true);
-	}
-	else {
-
-		return gSkillDamage.GetDamageRate(lpSkill, damage, false);
-	}
+	return gSkillDamage.GetDamageRate(lpSkill, damage, lpTarget->Type);
 }
 
 int CAttack::GetAttackDamageWizard(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, WORD* effect, int TargetDefense)
@@ -1201,14 +1183,7 @@ int CAttack::GetAttackDamageWizard(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill,
 
 	damage = ((damage < 0) ? 0 : damage);
 
-	if (lpTarget->Type == OBJECT_USER) {
-
-		return gSkillDamage.GetDamageRate(lpSkill, damage, true);
-	}
-	else {
-
-		return gSkillDamage.GetDamageRate(lpSkill, damage, false);
-	}
+	return gSkillDamage.GetDamageRate(lpSkill, damage, lpTarget->Type);
 }
 
 void CAttack::GetPreviewDefense(LPOBJ lpObj, DWORD* defense)
