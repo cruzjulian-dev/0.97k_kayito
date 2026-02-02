@@ -47,6 +47,12 @@ public:
 
 	void GCItemStackListSend(int aIndex);
 
+	bool IsBundleItem(short Index, BYTE Level);
+
+	bool UseStack(int aIndex, int SourceSlot, int ValueUse);
+
+	bool IsBundleItemSlot(int aIndex, int SourceSlot);
+
 private:
 
 	std::vector<ITEM_STACK_INFO> m_ItemStackInfo;

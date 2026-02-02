@@ -1482,10 +1482,11 @@ bool CObjectManager::CharacterUseJewelOfBles(LPOBJ lpObj, int SourceSlot, int Ta
 		return 0;
 	}
 
-	if (lpObj->Inventory[SourceSlot].m_Durability > 1)
-	{
-		return 0;
-	}
+	// Se comenta para poder usar la joya con Stacks y que se descuente del total.
+	//if (lpObj->Inventory[SourceSlot].m_Durability > 1)
+	//{
+	//	return 0;
+	//}
 
 	CItem* lpItem = &lpObj->Inventory[TargetSlot];
 
@@ -1544,10 +1545,11 @@ bool CObjectManager::CharacterUseJewelOfSoul(LPOBJ lpObj, int SourceSlot, int Ta
 		return 0;
 	}
 
-	if (lpObj->Inventory[SourceSlot].m_Durability > 1)
-	{
-		return 0;
-	}
+	// Se comenta para poder usar la joya con Stacks y que se descuente del total.
+	//if (lpObj->Inventory[SourceSlot].m_Durability > 1)
+	//{
+	//	return 0;
+	//}
 
 	CItem* lpItem = &lpObj->Inventory[TargetSlot];
 
@@ -1627,10 +1629,11 @@ bool CObjectManager::CharacterUseJewelOfLife(LPOBJ lpObj, int SourceSlot, int Ta
 		return 0;
 	}
 
-	if (lpObj->Inventory[SourceSlot].m_Durability > 1)
-	{
-		return 0;
-	}
+	// Se comenta para poder usar la joya con Stacks y que se descuente del total.
+	//if (lpObj->Inventory[SourceSlot].m_Durability > 1)
+	//{
+	//	return 0;
+	//}
 
 	CItem* lpItem = &lpObj->Inventory[TargetSlot];
 

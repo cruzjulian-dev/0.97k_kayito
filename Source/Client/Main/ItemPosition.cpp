@@ -183,8 +183,8 @@ void CItemPosition::MyRenderItem3D(float sx, float sy, float Width, float Height
 		sy += Height * 0.55f;
 	}
 	// Orb of Rageful Blow, Orb of Impale, Orb of Greater Fortitude
-	// Orb of Fire Slash, Orb of Penetration, Orb of Ice Arrow, Orb of Death Stab
-	else if ((Type >= GET_ITEM(12, 12) && Type <= GET_ITEM(12, 14)) || (Type >= GET_ITEM(12, 16) && Type <= GET_ITEM(12, 19)))
+	// Orb of Fire Slash, Orb of Penetration, Orb of Ice Arrow, Orb of Death Stab, Orb of Twisting Slash
+	else if ((Type >= GET_ITEM(12, 12) && Type <= GET_ITEM(12, 14)) || (Type >= GET_ITEM(12, 16) && Type <= GET_ITEM(12, 19) || Type == GET_ITEM(12, 7)))
 	{
 		sx += Width * 0.5f;
 

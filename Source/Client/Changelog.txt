@@ -27,6 +27,8 @@ Update 3:
 - Se corrigio el archivo Skill.ozj que tenía cambiado de lugar los skill FireBall y Flame
 - Se cambio el AutoClick a la tecla F8
 - Se ajusto el MoveList, se agrandó la columna Map para que entren bien los nombres de los mapas en resoluciones bajas
+- Se ajusto la posición del Orb of Twisting Slash
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
+- [Falta] Fixear Q,W,E con Alcohol y Remedy of Love, se representan por cantidad y no por Stack

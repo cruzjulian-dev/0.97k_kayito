@@ -2492,16 +2492,9 @@ void CItemManager::CGItemDropRecv(PMSG_ITEM_DROP_RECV* lpMsg, int aIndex)
 		return;
 	}
 
-	if ((lpItem->m_Index < GET_ITEM(12, 0) && lpItem->m_Level > 4) || lpItem->IsExcItem() != 0)
-	{
-		DataSend(aIndex, (BYTE*)&pMsg, pMsg.header.size);
-
-		return;
-	}
-
 	if ((lpItem->m_Index == GET_ITEM(14, 11) && (lpItem->m_Level >= 8 && lpItem->m_Level <= 12) && lpItem->m_Durability > 1)) //Esto hace que no puedan tirar las cajas kundun si tienen stack
 	{
-		//gNotice.GCNoticeSend(aIndex, 1, 0, 0, 0, 0, 0, "First, you must unpack the items to throw them");
+		gNotice.GCNoticeSend(lpObj->Index, 1, gMessage.GetTextMessage(113, lpObj->Lang));
 		DataSend(aIndex, (BYTE*)&pMsg, pMsg.header.size);
 		return;
 	}
@@ -2750,15 +2743,31 @@ void CItemManager::CGItemUseRecv(PMSG_ITEM_USE_RECV* lpMsg, int aIndex)
 
 		gEffectManager.DelEffect(lpObj, EFFECT_ICE);
 
+		gEffectManager.DelEffect(lpObj, EFFECT_ICE_ARROW);
+
 		this->DecreaseItemDur(lpObj, lpMsg->SourceSlot, 1);
 	}
 	else if (lpItem->m_Index == GET_ITEM(14, 9)) // Ale
 	{
-		gObjUseDrink(lpObj, lpItem->m_Level);
+		if (gItemStack.IsBundleItemSlot(lpObj->Index, lpMsg->SourceSlot))
+		{
+			if (gItemStack.UseStack(lpObj->Index, lpMsg->SourceSlot, 1))
+			{
+				gObjUseDrink(lpObj, lpItem->m_Level);
+			}
+			else
+			{
+				return;
+			}
+		}
+		else
+		{
+			gObjUseDrink(lpObj, lpItem->m_Level);
 
-		this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
+			this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
 
-		this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+			this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+		}
 	}
 	else if (lpItem->m_Index == GET_ITEM(14, 10)) // Town Portal Scroll
 	{
@@ -2773,44 +2782,100 @@ void CItemManager::CGItemUseRecv(PMSG_ITEM_USE_RECV* lpMsg, int aIndex)
 	{
 		if (gObjectManager.CharacterUseJewelOfBles(lpObj, lpMsg->SourceSlot, lpMsg->TargetSlot) != 0)
 		{
-			this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
+			if (gItemStack.IsBundleItemSlot(lpObj->Index, lpMsg->SourceSlot))
+			{
+				if (gItemStack.UseStack(lpObj->Index, lpMsg->SourceSlot, 1))
+				{
+					this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+				}
+				else
+				{
+					return;
+				}
+			}
+			else
+			{
+				this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
 
-			this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+				this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
 
-			this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+				this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+			}
 		}
 	}
 	else if (lpItem->m_Index == GET_ITEM(14, 14)) // Jewel of Soul
 	{
 		if (gObjectManager.CharacterUseJewelOfSoul(lpObj, lpMsg->SourceSlot, lpMsg->TargetSlot) != 0)
 		{
-			this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
+			if (gItemStack.IsBundleItemSlot(lpObj->Index, lpMsg->SourceSlot))
+			{
+				if (gItemStack.UseStack(lpObj->Index, lpMsg->SourceSlot, 1))
+				{
+					this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+				}
+				else
+				{
+					return;
+				}
+			}
+			else
+			{
+				this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
 
-			this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+				this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
 
-			this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+				this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+			}
 		}
 	}
 	else if (lpItem->m_Index == GET_ITEM(14, 16)) // Jewel of Life
 	{
 		if (gObjectManager.CharacterUseJewelOfLife(lpObj, lpMsg->SourceSlot, lpMsg->TargetSlot) != 0)
 		{
-			this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
+			if (gItemStack.IsBundleItemSlot(lpObj->Index, lpMsg->SourceSlot))
+			{
+				if (gItemStack.UseStack(lpObj->Index, lpMsg->SourceSlot, 1))
+				{
+					this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+				}
+				else
+				{
+					return;
+				}
+			}
+			else
+			{
+				this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
 
-			this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+				this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
 
-			this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+				this->GCItemModifySend(aIndex, lpMsg->TargetSlot);
+			}
 		}
 	}
 	else if (lpItem->m_Index == GET_ITEM(14, 20)) // Remedy of Love
 	{
 		if (lpItem->m_Level == 0)
 		{
-			gObjUseDrink(lpObj, 2);
+			if (gItemStack.IsBundleItemSlot(lpObj->Index, lpMsg->SourceSlot))
+			{
+				if (gItemStack.UseStack(lpObj->Index, lpMsg->SourceSlot, 1))
+				{
+					gObjUseDrink(lpObj, 2);
+				}
+				else
+				{
+					return;
+				}
+			}
+			else
+			{
+				gObjUseDrink(lpObj, lpItem->m_Level);
 
-			this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
+				this->InventoryDelItem(aIndex, lpMsg->SourceSlot);
 
-			this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+				this->GCItemDeleteSend(aIndex, lpMsg->SourceSlot, 1);
+			}
 		}
 	}
 	else

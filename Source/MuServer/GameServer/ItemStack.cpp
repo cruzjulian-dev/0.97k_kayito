@@ -151,3 +151,73 @@ void CItemStack::GCItemStackListSend(int aIndex)
 
 	DataSend(aIndex, send, size);
 }
+
+bool CItemStack::IsBundleItemSlot(int aIndex, int SourceSlot)
+{
+	LPOBJ lpObj = &gObj[aIndex];
+
+	if (gObjIsConnectedGP(aIndex) == 0)
+	{
+		return false;
+	}
+
+	CItem* lpItem = &lpObj->Inventory[SourceSlot];
+
+	if (lpItem->IsItem() == 0)
+	{
+		return false;
+	}
+
+	return this->IsBundleItem(lpItem->m_Index, lpItem->m_Level);
+}
+
+bool CItemStack::IsBundleItem(short Index, BYTE Level)
+{
+	for (std::vector<ITEM_STACK_INFO>::iterator it = this->m_ItemStackInfo.begin(); it != this->m_ItemStackInfo.end(); it++)
+	{
+		if (it->ItemIndex == Index)
+		{
+			if (it->Level == -1 || it->Level == Level)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+bool CItemStack::UseStack(int aIndex, int SourceSlot, int ValueUse)
+{
+	LPOBJ lpObj = &gObj[aIndex];
+
+	if (gObjIsConnectedGP(aIndex) == 0)
+	{
+		return false;
+	}
+
+	CItem* lpItem = &lpObj->Inventory[SourceSlot];
+
+	if (lpItem->IsItem() == 0)
+	{
+		return false;
+	}
+
+	if (lpItem->m_Durability < ValueUse)
+	{
+		return false;
+	}
+
+	lpItem->m_Durability -= ValueUse;
+
+	if (lpItem->m_Durability < 1.0)
+	{
+		gItemManager.InventoryDelItem(aIndex, SourceSlot);
+		gItemManager.GCItemDeleteSend(aIndex, SourceSlot, 1);
+	}
+	else
+	{
+		gItemManager.GCItemModifySend(aIndex, SourceSlot);
+	}
+	return true;
+}

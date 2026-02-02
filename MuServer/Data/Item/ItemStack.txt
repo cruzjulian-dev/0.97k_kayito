@@ -19,4 +19,6 @@
 14,014		*		255		*		//Jewel of Soul
 14,016		*		255		*		//Jewel of Life
 14,022		*		255		*		//Jewel of Creation
+14,009		*		255		*		//Ale
+14,020		*		255		*		//Remedy of Love
 end
