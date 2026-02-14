@@ -117,10 +117,10 @@ AddEventExperienceRate_AL3=550
 ItemDropTime=30
 
 ; Rate of the drop of the items
-ItemDropRate_AL0=100
-ItemDropRate_AL1=100
-ItemDropRate_AL2=100
-ItemDropRate_AL3=100
+ItemDropRate_AL0=50
+ItemDropRate_AL1=50
+ItemDropRate_AL2=50
+ItemDropRate_AL3=50
 
 ;==================================================
 ; Money Drop Settings
