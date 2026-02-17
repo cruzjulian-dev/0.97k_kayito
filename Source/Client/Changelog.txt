@@ -28,6 +28,7 @@ Update 3:
 - Se cambio el AutoClick a la tecla F8
 - Se ajusto el MoveList, se agrandó la columna Map para que entren bien los nombres de los mapas en resoluciones bajas
 - Se ajusto la posición del Orb of Twisting Slash
+- Fix Potions with Golden Archer and Quest item preview (Kayito Fix)
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.

@@ -21,6 +21,7 @@ Update 3:
 - Se agrego SkillDamage.txt. Daños por Skills PvP/PvM + EffectRate PvP/PvM.
 - Se mejoro el sistema de ItemStack permitiendo usar jewels sobre items y consumibles stackeados.
 - Texto de advertencia al querer arrojar cajas kundun stackeadas.
+- Fix Potions with Golden Archer and Quest item preview (Kayito Fix)
 
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills
