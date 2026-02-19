@@ -27,7 +27,7 @@ public:
 
 	int GetDamageRate(CSkill* lpSkill, int damage, int type);
 
-	int GetEffectRate(CSkill* lpSkill, int type);
+	bool GetEffectRate(int skill, int type);
 
 private:
 

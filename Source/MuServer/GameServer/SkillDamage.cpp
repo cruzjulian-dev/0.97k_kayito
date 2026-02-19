@@ -147,11 +147,11 @@ int CSkillDamage::GetDamageRate(CSkill* lpSkill, int damage, int type)
 	return damage;
 }
 
-int CSkillDamage::GetEffectRate(CSkill* lpSkill, int type) // OK
+bool CSkillDamage::GetEffectRate(int skill, int type) // OK
 {
-	if (lpSkill != 0)
+	if (skill != 0)
 	{
-		std::map<int, SKILL_DAMAGE_INFO>::iterator it = this->m_SkillEffectRateInfo.find(lpSkill->m_index);
+		std::map<int, SKILL_DAMAGE_INFO>::iterator it = this->m_SkillEffectRateInfo.find(skill);
 
 		if (it != this->m_SkillEffectRateInfo.end())
 		{

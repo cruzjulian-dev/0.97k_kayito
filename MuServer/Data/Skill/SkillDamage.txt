@@ -32,7 +32,7 @@
 	36	100		100		//Summon Soldier	
 	41	100		100		//Twisting Slash	
 	42	100		100		//Rageful Blow	
-	43	400		100		//Death Stab		
+	43	100		100		//Death Stab		
 	47	100		100		//Impale		
 	48	100		100		//Greater Life			
 	51	100		100		//Ice Arrow	

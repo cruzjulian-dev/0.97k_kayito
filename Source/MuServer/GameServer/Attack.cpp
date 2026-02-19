@@ -314,11 +314,23 @@ bool CAttack::Attack(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, bool send, in
 
 			GCManaSend(lpObj->Index, 0xFF, (int)lpObj->Mana, lpObj->BP);
 		}
+
+		if (lpObj->Inventory[0].m_Index == GET_ITEM(2, 4) || lpObj->Inventory[1].m_Index == GET_ITEM(2, 4) // Crystal Morning Star
+			|| lpObj->Inventory[0].m_Index == GET_ITEM(2, 5) || lpObj->Inventory[1].m_Index == GET_ITEM(2, 5)) // Crystal Sword
+		{
+			if (rand() % 20 == 0)
+			{
+				if (this->ApplySkillEffect(lpObj, lpTarget, SKILL_ICE, damage))
+				{
+					gSkillManager.GCSkillAttackSend(lpObj, SKILL_ICE, lpTarget->Index, 0);
+				}
+			}
+		}
 	}
 
 	if (lpSkill != 0 && count <= 1)
 	{
-		if (this->ApplySkillEffect(lpObj, lpTarget, lpSkill, damage) == false)
+		if (this->ApplySkillEffect(lpObj, lpTarget, lpSkill->m_index, damage) == false)
 		{
 			if (send != false)
 			{
@@ -861,23 +873,23 @@ bool CAttack::MissCheck(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, int send, 
 	return true;
 }
 
-bool CAttack::ApplySkillEffect(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, int damage)
+bool CAttack::ApplySkillEffect(LPOBJ lpObj, LPOBJ lpTarget, int skill, int damage)
 {
-	if (gSkillManager.GetSkillType(lpSkill->m_index) != -1 && gObjCheckResistance(lpTarget, gSkillManager.GetSkillType(lpSkill->m_index)) != false)
+	if (gSkillManager.GetSkillType(skill) != -1 && gObjCheckResistance(lpTarget, gSkillManager.GetSkillType(skill)) != false)
 	{
 		return false;
 	}
 
-	if (gSkillDamage.GetEffectRate(lpSkill, lpTarget->Type) == 0)
+	if (gSkillDamage.GetEffectRate(skill, lpTarget->Type) == false)
 	{
 		return 0;
 	}
 
-	switch (lpSkill->m_skill)
+	switch (skill)
 	{
 		case SKILL_POISON:
 		{
-			gEffectManager.AddEffect(lpTarget, 0, gSkillManager.GetSkillEffect(lpSkill->m_index), 20, lpObj->Index, 2, 3, 0);
+			gEffectManager.AddEffect(lpTarget, 0, gSkillManager.GetSkillEffect(skill), 20, lpObj->Index, 2, 3, 0);
 
 			break;
 		}
@@ -891,7 +903,7 @@ bool CAttack::ApplySkillEffect(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, int
 
 		case SKILL_ICE:
 		{
-			gEffectManager.AddEffect(lpTarget, 0, gSkillManager.GetSkillEffect(lpSkill->m_index), 10, 0, 0, 0, 0);
+			gEffectManager.AddEffect(lpTarget, 0, gSkillManager.GetSkillEffect(skill), 10, 0, 0, 0, 0);
 
 			break;
 		}
@@ -933,14 +945,14 @@ bool CAttack::ApplySkillEffect(LPOBJ lpObj, LPOBJ lpTarget, CSkill* lpSkill, int
 
 		case SKILL_ICE_ARROW:
 		{
-			gEffectManager.AddEffect(lpTarget, 0, gSkillManager.GetSkillEffect(lpSkill->m_index), 7, 0, 0, 0, 0);
+			gEffectManager.AddEffect(lpTarget, 0, gSkillManager.GetSkillEffect(skill), 7, 0, 0, 0, 0);
 
 			break;
 		}
 
 		case SKILL_FIRE_SLASH:
 		{
-			gSkillManager.ApplyFireSlashEffect(lpObj, lpTarget, lpSkill, damage);
+			gSkillManager.ApplyFireSlashEffect(lpObj, lpTarget, skill, damage);
 
 			break;
 		}
