@@ -24,6 +24,7 @@ Update 3:
 - Fix Potions with Golden Archer and Quest item preview (Kayito Fix)
 - Add & Fix Crystal Sword Effect (Kayito Fix)
 - Se agrega columna [memb_guid] al script de creación de la Base de Datos.
+- Se agrega campo Account en [Reconnect] para evitar fallos.
 
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills

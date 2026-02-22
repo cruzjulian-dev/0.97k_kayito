@@ -5,6 +5,7 @@
 struct RECONNECT_INFO
 {
 	char Name[11];
+	char Account[11];
 	DWORD ReconnectTime;
 	int PartyNumber;
 	int AutoAddPointCount;
