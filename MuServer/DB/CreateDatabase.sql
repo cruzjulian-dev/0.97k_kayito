@@ -196,6 +196,7 @@ GO
 PRINT 'Creating table MEMB_INFO...'
 GO
 CREATE TABLE [MEMB_INFO] (
+	[memb_guid] INT IDENTITY(1,1) NOT NULL,
 	[memb___id] VARCHAR(10) NOT NULL,
 	[memb__pwd] VARCHAR(10) NOT NULL,
 	[memb_name] VARCHAR(10) NOT NULL,
