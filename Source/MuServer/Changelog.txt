@@ -28,6 +28,7 @@ Update 3:
 
 Update 4:
 - Fix bug monsters que quedaban quietos sin pegar ni moverse.
+- Fix Attack PK players war. (Kayito Fix)
 
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills
