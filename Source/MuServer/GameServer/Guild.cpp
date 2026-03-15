@@ -395,6 +395,15 @@ void CGuild::CGGuildRequestRecv(PMSG_GUILD_REQUEST_RECV* lpMsg, int aIndex)
 
 	LPOBJ lpTarget = &gObj[bIndex];
 
+	if (lpTarget->DieRegen != 0 || lpObj->DieRegen != 0)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, gMessage.GetTextMessage(115, lpObj->Lang));
+
+		this->GCGuildResultSend(aIndex, 0);
+
+		return;
+	}
+
 	if ((lpTarget->Option & 1) == 0)
 	{
 		this->GCGuildResultSend(aIndex, 0);
