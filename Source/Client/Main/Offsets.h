@@ -133,6 +133,7 @@
 #define InputTextWidth *(int*)0x00559C8C
 #define InputTextMax (&*(int*)0x00559C94)
 #define InputNumber *(int*)0x00559C88
+#define MacroText ((char (*)[256])0x07E0FFC8)
 #define ClearInput ((void(_cdecl*)(BOOL bClearWhisperTarget)) 0x0047EC60)
 #define RenderInputText ((void(_cdecl*)(int x, int y, int Index)) 0x0047F0B0)
 

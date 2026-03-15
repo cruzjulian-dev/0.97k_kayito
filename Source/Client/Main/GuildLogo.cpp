@@ -26,7 +26,11 @@ void CGuildLogo::DrawGuildLogo(int x, int y, DWORD c)
 	{
 		if (*(short*)(character + 0x1DA) != -1) // Check Character Guild
 		{
-			CreateGuildMark(*(WORD*)(character + 0x1DA), true); // CreateGuildMark
+			EnableAlphaTest(true);
+
+			glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+
+			CreateGuildMark(*(short*)(character + 0x1DA), true); // CreateGuildMark
 
 			RenderBitmap(0x22, ((float)x - 11.0f), (float)y, 10.0f, 10.0f, 0.0f, 0.0f, 1.0f, 1.0f, true, true); //RenderBitmap
 		}

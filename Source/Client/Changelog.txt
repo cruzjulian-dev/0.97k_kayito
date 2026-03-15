@@ -32,6 +32,7 @@ Update 3:
 
 Update 4:
 - Fix Quest Proceed Button (Kayito Fix)
+- Fix Guild logo background, Macro text, Drop divine items (Kayito Fix)
 
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
