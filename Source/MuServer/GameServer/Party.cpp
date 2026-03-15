@@ -336,6 +336,15 @@ void CParty::CGPartyRequestRecv(PMSG_PARTY_REQUEST_RECV* lpMsg, int aIndex)
 		return;
 	}
 
+	if (lpTarget->DieRegen != 0 || lpObj->DieRegen != 0)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, gMessage.GetTextMessage(114, lpObj->Lang));
+
+		this->GCPartyResultSend(aIndex, 0);
+
+		return;
+	}
+
 	if (((lpObj->Level > lpTarget->Level) ? (lpObj->Level - lpTarget->Level) : (lpTarget->Level - lpObj->Level)) > gServerInfo.m_PartyLevelDifference)
 	{
 		gNotice.GCNoticeSend(lpObj->Index, 1, gMessage.GetTextMessage(24, lpObj->Lang), gServerInfo.m_PartyLevelDifference);
