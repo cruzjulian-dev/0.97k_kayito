@@ -59,6 +59,10 @@ int gObjGuardSearchEnemy(LPOBJ lpObj);
 
 void gObjMonsterProcess(LPOBJ lpObj);
 
+void gObjMonsterUnstuckMove(LPOBJ lpObj);
+
+BOOL gObjMonsterFindNearFreePos(LPOBJ lpObj, int centerX, int centerY, BYTE* outX, BYTE* outY);
+
 BOOL PathFindMoveMsgSend(LPOBJ lpObj);
 
 void gObjMonsterMoveAction(LPOBJ lpObj);

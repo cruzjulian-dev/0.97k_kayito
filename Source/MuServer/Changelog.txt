@@ -26,6 +26,9 @@ Update 3:
 - Se agrega columna [memb_guid] al script de creación de la Base de Datos.
 - Se agrega campo Account en [Reconnect] para evitar fallos.
 
+Update 4:
+- Fix bug monsters que quedaban quietos sin pegar ni moverse.
+
 [Cambio en MuServer Files]
 - Para permitir el Lageo, aumento Rango en Skill.txt lado servidor de las siguientes Skills
   Death Stab, Fire Slash.

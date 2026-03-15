@@ -1547,16 +1547,25 @@ void gObjMonsterProcess(LPOBJ lpObj)
 
 	if (lpObj->ActionState.Move != 0)
 	{
+		// Caso especial: esta intentando moverse a la misma celda
+		if (lpObj->X == lpObj->MTX && lpObj->Y == lpObj->MTY)
+		{
+			gObjMonsterUnstuckMove(lpObj);
+			return;
+		}
+
+		// Intentamos mover normalmente usando pathfinding
 		if (PathFindMoveMsgSend(lpObj) == TRUE)
 		{
-			lpObj->ActionState.Move = (DWORD)0;
-
+			// Movimiento correcto, terminamos
+			lpObj->ActionState.Move = 0;
+			lpObj->PathStartEnd = 0;
 			return;
 		}
 		else
 		{
-			lpObj->ActionState.Move = (DWORD)1;
-
+			// Path fallo, aplicamos logica de destrabe
+			gObjMonsterUnstuckMove(lpObj);
 			return;
 		}
 	}
@@ -1659,6 +1668,138 @@ void gObjMonsterProcess(LPOBJ lpObj)
 
 		lpObj->ActionState.Attack = 0;
 	}
+}
+
+BOOL gObjMonsterFindNearFreePos(LPOBJ lpObj, int centerX, int centerY, BYTE* outX, BYTE* outY)
+{
+	// 8 direcciones alrededor
+	static int dir[8][2] =
+	{
+		{  1,  0 }, { -1,  0 },
+		{  0,  1 }, {  0, -1 },
+		{  1,  1 }, {  1, -1 },
+		{ -1,  1 }, { -1, -1 },
+	};
+
+	int map = lpObj->Map;
+
+	// Buscamos primero radio 1, luego 2 y 3
+	for (int radius = 1; radius <= 3; radius++)
+	{
+		for (int i = 0; i < 8; i++)
+		{
+			int nx = centerX + dir[i][0] * radius;
+			int ny = centerY + dir[i][1] * radius;
+
+			// Si tu mapa es 256x256 esto sirve, si usas otro size ajusta estos limites
+			if (nx < 0 || ny < 0 || nx >= 255 || ny >= 255)
+			{
+				continue;
+			}
+
+			BYTE attr = gMap[map].GetAttr(nx, ny);
+
+			// Bloqueado por attr del mapa
+			if ((attr & 1) != 0 || (attr & 2) != 0 || (attr & 4) != 0 || (attr & 8) != 0)
+			{
+				continue;
+			}
+
+			// Respeta la logica de distancia / Dis / MoveRange
+			if (gObjMonsterMoveCheck(lpObj, nx, ny) == 0)
+			{
+				continue;
+			}
+
+			*outX = (BYTE)nx;
+			*outY = (BYTE)ny;
+
+			return 1;
+		}
+	}
+
+	return 0;
+}
+
+
+void gObjMonsterUnstuckMove(LPOBJ lpObj)
+{
+	if (lpObj == NULL)
+	{
+		return;
+	}
+
+	// limpiamos cualquier path viejo
+	lpObj->PathStartEnd = 0;
+
+	BYTE nx, ny;
+
+	// 1) Si tiene target valido, buscamos cerca del target
+	if (OBJECT_RANGE(lpObj->TargetNumber) != 0)
+	{
+		LPOBJ lpTarget = &gObj[lpObj->TargetNumber];
+
+		if (lpTarget->Connected > OBJECT_LOGGED &&
+			lpTarget->CloseCount == -1 &&
+			lpTarget->Live != FALSE &&
+			lpTarget->Map == lpObj->Map)
+		{
+			if (gObjMonsterFindNearFreePos(lpObj, lpTarget->X, lpTarget->Y, &nx, &ny) != 0)
+			{
+				lpObj->MTX = nx;
+				lpObj->MTY = ny;
+				lpObj->ActionState.Move = 1;
+				lpObj->NextActionTime = 200;
+
+				gObjMonsterMoveAction(lpObj);
+				return;
+			}
+		}
+	}
+
+	// 2) Sin target o fallo lo anterior, buscamos cerca del propio monstruo
+	if (gObjMonsterFindNearFreePos(lpObj, lpObj->X, lpObj->Y, &nx, &ny) != 0)
+	{
+		lpObj->MTX = nx;
+		lpObj->MTY = ny;
+		lpObj->ActionState.Move = 1;
+		lpObj->NextActionTime = 200;
+
+		gObjMonsterMoveAction(lpObj);
+
+		return;
+	}
+	else
+	{
+		BYTE tpx;
+
+		BYTE tpy;
+
+		int maxmoverange = lpObj->MoveRange * 2 + 1;
+
+		tpx = (lpObj->X - lpObj->MoveRange) + (BYTE)(GetLargeRand() % maxmoverange);
+
+		tpy = (lpObj->Y - lpObj->MoveRange) + (BYTE)(GetLargeRand() % maxmoverange);
+
+		int mchk = gObjMonsterMoveCheck(lpObj, tpx, tpy);
+
+		BYTE attr = gMap[lpObj->Map].GetAttr(tpx, tpy);
+
+		lpObj->MTX = tpx;
+
+		lpObj->MTY = tpy;
+
+		lpObj->ActionState.Move = 1;
+
+		lpObj->NextActionTime = 3000;
+
+		return;
+	}
+
+	// 3) Ultimo recurso: no se encontro nada cerca, movimiento aleatorio con MoveAction
+	lpObj->ActionState.Move = 0; // MoveAction se va a encargar de setearlo de nuevo
+
+	gObjMonsterMoveAction(lpObj);
 }
 
 BOOL PathFindMoveMsgSend(LPOBJ lpObj)
