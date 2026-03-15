@@ -43,8 +43,6 @@ void CReconnect::SetReconnectInfo(LPOBJ lpObj)
 
 	memcpy(info.Name, lpObj->Name, sizeof(info.Name));
 
-	memcpy(info.Account, lpObj->Account, sizeof(info.Account));
-
 	info.ReconnectTime = GetTickCount();
 
 	info.PartyNumber = lpObj->PartyNumber;
@@ -79,8 +77,6 @@ void CReconnect::GetReconnectInfo(LPOBJ lpObj)
 
 	if (it != this->m_ReconnectInfo.end())
 	{
-		memcpy(lpObj->Account, it->second.Account, sizeof(lpObj->Account));
-
 		this->ResumeParty(lpObj, &it->second);
 
 		this->ResumeCommand(lpObj, &it->second);
