@@ -30,6 +30,9 @@ Update 3:
 - Se ajusto la posición del Orb of Twisting Slash
 - Fix Potions with Golden Archer and Quest item preview (Kayito Fix)
 
+Update 4:
+- Fix Quest Proceed Button (Kayito Fix)
+
 Prox Update:
 - [Falta] Traer la Camara 3D Flashera, quitarle el arrastre y el FOG.
 - [Falta] Fixear Q,W,E con Alcohol y Remedy of Love, se representan por cantidad y no por Stack
