@@ -90,6 +90,8 @@ private:
 
 	static void FixMoveWhileAttacking();
 
+	static void FixShieldTeleportBug();
+
 	static void CalcFPS();
 
 	static void FixPigeons();
