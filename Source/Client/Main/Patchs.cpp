@@ -197,7 +197,7 @@ void CPatchs::Init()
 
 	SetCompleteHook(0xE9, 0x004AF967, &this->FixMoveWhileAttacking);
 
-	SetCompleteHook(0xE9, 0x0049CC68, &this->FixShieldTeleportBug); // Fix Bug TS/Shield (Lageo)
+	SetCompleteHook(0xE9, 0x0049CC68, &this->FixTSBug); // Fix Bug TS/Shield (Lageo)
 
 	SetCompleteHook(0xE9, 0x0043FD70, &this->CalcFPS);
 
@@ -2414,25 +2414,8 @@ EXIT:
 	}
 }
 
-_declspec(naked) void CPatchs::FixShieldTeleportBug()
+_declspec(naked) void CPatchs::FixTSBug()
 {
-	// Fix Bug TS/Shield ("Lageo") -> Attack() @ 0x0049CBF0
-	//
-	// Original 0.97k (0x0049CC68):
-	//     if (MouseRButtonPush || MouseRButton)
-	//     {
-	//         MouseRButtonPush = 0;
-	//         Success = 1;
-	//     }
-	//
-	// Main 5.2:
-	//     if ((MouseRButtonPush || MouseRButton) && !(MouseLButtonPush || MouseLButton) && !c->Movement)
-	//
-	// En el mismo ciclo MoveHero() ya calculo el camino y SendMove() ya salio al GameServer.
-	// Si dejamos que la skill se dispare, esta hace c->Movement = false solo en el cliente local:
-	// el server y el resto de los clientes siguen recorriendo el camino y te ven caminando lejos.
-	// Al no marcar Success, Attack() retorna sin ejecutar la skill y no se produce la desync.
-
 	static DWORD jmpOnSkill = 0x0049CC7A; // MouseRButtonPush = 0; Success = 1;
 	static DWORD jmpOnSkip = 0x0049CC83; // Success queda en 0 -> Attack() no ejecuta la skill
 
